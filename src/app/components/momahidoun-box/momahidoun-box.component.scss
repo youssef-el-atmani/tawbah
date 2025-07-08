@@ -1,0 +1,33 @@
+.momahidoun-box {
+  background-color: #fffaff;
+  width: 600px;
+  height: 77vh;
+  border-radius: 17px;
+  box-shadow: 0 0 13px 4px #0000003f;
+
+  .nav-helper-bar {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    height: 120px;
+    background-color: #1e1b18;
+    color: #fffaff;
+    border-radius: 17px 17px 0 0;
+
+    .title {
+      font-size: 1.2rem;
+      font-weight: 100;
+      border-bottom: #fffaff98 solid 2px;
+      padding: 3px;
+      margin: 0;
+      flex: 0;
+    }
+
+    .filter {
+      background-color: #1e1b18;
+      height: 50px;
+      flex: 1;
+    }
+  }
+}
