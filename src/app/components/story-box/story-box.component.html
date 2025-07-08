@@ -1,0 +1,20 @@
+<section lang="ar" class="story-box" aria-label="story section">
+  <section class="nav-helper-bar" aria-label="nav-helper-bar">
+    <h2 class="title">{{ title() }}</h2>
+    <section class="identity" aria-label="story identity">
+      <img
+        class="id-img"
+        src="{{ profileImgUrl() }}"
+        alt="momahid personal photo"
+      />
+      <span
+        lang="ar"
+        class="status"
+        style="visibility: {{ verifiedStampStatus() }}"
+      >
+        مـوثـوق
+      </span>
+    </section>
+  </section>
+  <section class="story-feed" aria-label="story feed"></section>
+</section>
