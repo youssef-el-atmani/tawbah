@@ -1,0 +1,96 @@
+<div lang="{{ pageLanguage() }}" class="momahid-card">
+  <div class="img-container">
+    <img
+      class="id-img"
+      src="{{ momahidPhoto() }}"
+      alt="momahid personal photo"
+      width="60px"
+      height="60px"
+    />
+    <span
+      lang="ar"
+      class="status"
+      style="visibility: {{ verifiedStampStatus() }}"
+    >
+      مـوثـوق
+    </span>
+  </div>
+  <div class="global-info">
+    <div class="name card-element">{{ momahidName() }}</div>
+    <div class="age-row">
+      <div class="age card-element">
+        <div class="icon-container">
+          <img
+            class="card-icon"
+            src="icons/momahid-card/sand-clock.png"
+            alt="sand clock that represent momahid age"
+            width="27px"
+            height="27px"
+          />
+        </div>
+        <p class="label" lang="{{ pageLanguage() }}">
+          عام <span dir="rtl">{{ momahidAge() }}</span>
+        </p>
+      </div>
+
+      <div class="work-or-study card-element">
+        <div class="icon-container">
+          <img
+            class="card-icon"
+            src="{{ momahidWorkOrStudyIcon() }}"
+            alt="icon for study or work"
+            width="27px"
+            height="27px"
+          />
+        </div>
+        <p class="label" lang="{{ pageLanguage() }}">
+          {{ momahidWorkOrStudy() }}
+        </p>
+      </div>
+    </div>
+
+    <div class="country-row">
+      <div class="country card-element">
+        <div class="icon-container">
+          <img
+            class="card-icon"
+            src="icons/momahid-card/country.png"
+            alt="icon that represent the country label"
+            width="27px"
+            height="27px"
+          />
+        </div>
+        <p class="label" lang="{{ pageLanguage() }}">البلد</p>
+      </div>
+
+      <div class="family-status card-element">
+        <div class="icon-container">
+          <img
+            class="card-icon"
+            src="{{ momahidFamilyStatusIcon() }}"
+            alt="icon that represent the country label"
+            width="27px"
+            height="27px"
+          />
+        </div>
+        <p class="label" lang="{{ pageLanguage() }}">
+          {{ momahidFamilyStatus() }}
+        </p>
+      </div>
+    </div>
+    <div class="addiction-years card-element">
+      <div class="icon-container">
+        <img
+          class="card-icon"
+          src="icons/momahid-card/sick_man_lying_on_bed.png"
+          alt="icon that represent the country label"
+          width="37px"
+          height="37px"
+        />
+      </div>
+      <p class="label" lang="{{ pageLanguage() }}">
+        {{ momahidAddictionDurationDisplay() }}
+      </p>
+    </div>
+  </div>
+</div>

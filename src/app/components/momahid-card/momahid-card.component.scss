@@ -1,0 +1,107 @@
+[lang="ar"].momahid-card .addiction-years img.card-icon {
+  transform: scaleX(-1);
+}
+
+.momahid-card {
+  font-size: 1.2rem;
+  display: flex;
+  flex-direction: row-reverse;
+  height: 250px;
+  background-color: #fff;
+  border-radius: 17px;
+  box-shadow: 0 0 11px 3px #00000040;
+
+  .img-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100px;
+    flex: 0.9;
+    background-color: #1e1b18;
+    border-radius: 0 17px 17px 0;
+
+    img {
+      height: 70px;
+      width: 70px;
+      border-radius: 100%;
+    }
+
+    .status {
+      font-size: 11px;
+      border-radius: 3px;
+      position: relative;
+      bottom: 12px;
+      background-color: #c2f8cb;
+      color: #329408;
+      padding: 0 9px;
+    }
+  }
+
+  .global-info {
+    display: flex;
+    flex-direction: column;
+    flex: 3;
+    gap: 7px;
+    padding: 7px 17px;
+    margin: 1px;
+
+    font-size: 1.3rem;
+
+    > div {
+      display: flex;
+      flex-direction: row-reverse;
+      gap: 11px;
+      flex: 1;
+
+      .card-element {
+        display: flex;
+        flex-direction: row-reverse;
+        align-items: center;
+        padding-right: 11px;
+        flex: 1;
+        background-color: #1e1b18;
+        color: #fff;
+        gap: 11px;
+        border-radius: 7px;
+
+        .icon-container {
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          width: 37px;
+          height: 37px;
+          background-color: #fff;
+          border-radius: 100%;
+        }
+      }
+      p {
+        margin: 0;
+      }
+    }
+
+    .name,
+    .addiction-years {
+      font-weight: 700;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 15px;
+      background-color: #1e1b18;
+      color: #fff;
+      border-radius: 7px;
+    }
+    .addiction-years {
+      background-color: #d8315b;
+    }
+    .addiction-years > .icon-container {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      width: 60px;
+      height: 37px;
+      background-color: #fff;
+      border-radius: 7px;
+    }
+  }
+}
