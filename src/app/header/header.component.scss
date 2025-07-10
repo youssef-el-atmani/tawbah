@@ -7,6 +7,10 @@ header {
   align-items: center;
   padding-inline: 50px;
 
+  .logo {
+    cursor: pointer;
+  }
+
   img {
     height: 80%;
   }
