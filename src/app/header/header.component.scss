@@ -14,18 +14,30 @@ header {
   img {
     height: 80%;
   }
-  .be-momahid {
-    cursor: pointer;
-    background-color: transparent;
-    color: #fffaff;
-    border: none;
-    border-bottom: 2px #8d8e8d solid;
-    padding-bottom: 3px;
-    font-size: 1.5rem;
-    text-decoration: none;
+  nav {
+    ul {
+      display: flex;
+      flex-direction: row-reverse;
+      gap: 37px;
+      .link {
+        cursor: pointer;
+        background-color: transparent;
+        color: #fffaff;
+        border: none;
+        border-bottom: 2px #8d8e8d solid;
+        padding-bottom: 3px;
+        font-size: 1.5rem;
+        text-decoration: none;
 
-    &:hover {
-      border-color: #fffaff;
+        &:hover {
+          border-color: #fffaff;
+        }
+
+        .plus {
+          font-weight: bold;
+          color: #3e92cc;
+        }
+      }
     }
   }
 }

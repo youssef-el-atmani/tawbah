@@ -10,4 +10,13 @@ export const routes: Routes = [
       );
     },
   },
+
+  {
+    path: 'join-momahidoun',
+    loadComponent: () => {
+      return import('./join-momahidoun/join-momahidoun.component').then(
+        (m) => m.JoinMomahidounComponent
+      );
+    },
+  },
 ];
