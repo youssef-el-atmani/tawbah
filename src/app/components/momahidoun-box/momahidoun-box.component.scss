@@ -5,12 +5,15 @@
   border-radius: 17px;
   box-shadow: 0 0 13px 4px #0000003f;
 
+  display: flex;
+  flex-direction: column;
   .nav-helper-bar {
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
     align-items: center;
     height: 120px;
+    flex: 1;
     background-color: #1e1b18;
     color: #fffaff;
     border-radius: 17px 17px 0 0;
@@ -29,5 +32,15 @@
       height: 50px;
       flex: 1;
     }
+  }
+
+  .momahidoun-feed {
+    display: flex;
+    flex-direction: column;
+    gap: 17px;
+    padding: 17px;
+    flex: 4;
+    // background-color: aquamarine;
+    overflow: scroll;
   }
 }
