@@ -12,8 +12,7 @@
     flex-direction: column;
     justify-content: flex-start;
     align-items: center;
-    height: 120px;
-    flex: 1;
+    flex: 0 0 129px;
     background-color: #1e1b18;
     color: #fffaff;
     border-radius: 17px 17px 0 0;
@@ -39,7 +38,7 @@
     flex-direction: column;
     gap: 17px;
     padding: 17px;
-    flex: 4;
+    flex: 1;
     // background-color: aquamarine;
     overflow: scroll;
   }
