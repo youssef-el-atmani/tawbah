@@ -10,9 +10,9 @@ import { single } from 'rxjs';
 export class MomahidCardComponent {
   // Card Related info
   pageLanguage = signal('ar');
-  storyVerified = signal(true);
+  isStoryVerified = signal(true);
   verifiedStampStatus = computed(() =>
-    this.storyVerified() ? 'visible' : 'hidden'
+    this.isStoryVerified() ? 'visible' : 'hidden'
   );
 
   // # Momahid direct info #
