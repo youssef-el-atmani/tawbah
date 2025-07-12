@@ -1,11 +1,13 @@
 import { Component, signal, computed } from '@angular/core';
 import { single } from 'rxjs';
+import { MomahidCardService } from '../../services/momahid-card.service';
 
 @Component({
   selector: 'app-momahid-card',
   imports: [],
   templateUrl: './momahid-card.component.html',
   styleUrl: './momahid-card.component.scss',
+  providers: [MomahidCardService],
 })
 export class MomahidCardComponent {
   // Card Related info
