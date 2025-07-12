@@ -4,16 +4,8 @@
     <section class="filter" aria-label="momahidoun filter">filter</section>
   </section>
   <section class="momahidoun-feed" aria-label="momahidoun feed">
-    <app-momahid-card></app-momahid-card>
-    <app-momahid-card></app-momahid-card>
-    <app-momahid-card></app-momahid-card>
-    <app-momahid-card></app-momahid-card>
-    <app-momahid-card></app-momahid-card>
-    <app-momahid-card></app-momahid-card>
-    <app-momahid-card></app-momahid-card>
-    <app-momahid-card></app-momahid-card>
-    <app-momahid-card></app-momahid-card>
-    <app-momahid-card></app-momahid-card>
-    <app-momahid-card></app-momahid-card>
+    @for (momahid of momahidCardService.momahidounsList; track momahid.id) {
+    <app-momahid-card [momahidInfo]="momahid"></app-momahid-card>
+    }
   </section>
 </section>
