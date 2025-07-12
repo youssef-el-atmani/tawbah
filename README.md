@@ -17,3 +17,5 @@ A web project sharing personal stories of breaking free from addiction by embrac
 - [Man](https://www.flaticon.com/free-icon/muslim_10031350?term=muslim%20man&page=1&position=8&origin=search&related_id=10031350)
 - [Work](https://www.flaticon.com/free-icon/under-construction_8124920?related_id=8124920)
 - [Sick Man](https://www.flaticon.com/free-icon/bed_5256177?term=sick&page=1&position=7&origin=search&related_id=5256177)
+- [Single Check](https://www.freepik.com/icon/check_9778608#fromView=resource_detail&position=1)
+- [Double Check](https://www.flaticon.com/free-icon/double-check_2716288?term=double%20check&page=1&position=74&origin=search&related_id=2716288)

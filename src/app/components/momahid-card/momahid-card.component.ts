@@ -39,8 +39,8 @@ export class MomahidCardComponent {
 
   momahidFamilyStatusIcon = computed(() =>
     this.momahidInfo()?.isMomahidMarried
-      ? 'icons/momahid-card/married.png'
-      : 'icons/momahid-card/single.png'
+      ? 'icons/momahid-card/married-check.png'
+      : 'icons/momahid-card/single-check.png'
   );
 
   // Momahid Addition Duration
