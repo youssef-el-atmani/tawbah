@@ -1,5 +1,129 @@
-<p>join-momahidoun works!</p>
-<p>
-  It will contain the form that will be submitted for generating the request to
-  join the Momahidoun Family
-</p>
+<form [formGroup]="momahidForm" action="">
+  <!-- Name -->
+  <div class="form-input">
+    <label for="momahid-name">Name</label>
+    <input type="text" id="momahid-name" formControlName="momahidName" />
+  </div>
+
+  <!-- Age -->
+  <div class="form-input">
+    <label for="momahid-age">How old are you</label>
+    <input type="text" id="momahid-age" formControlName="momahidAge" />
+  </div>
+
+  <!-- Nature of work or Study -->
+  <div class="form-input">
+    <label for="nature-of-work">The nature of work or study</label>
+    <textarea
+      formControlName="momahidTypeOfWorkStudy"
+      id="nature-of-work"
+    ></textarea>
+  </div>
+  <hr />
+
+  <!-- First Porn Interaction Age -->
+  <div class="form-input">
+    <label for="momahid-age-first-interaction"
+      >How old were you when you first used porn</label
+    >
+    <input
+      type="number"
+      id="momahid-age-first-interaction"
+      formControlName="momahidAgeWhenFirstInteractWithPorn"
+    />
+  </div>
+
+  <!-- Addiction Duration -->
+  <div class="form-input">
+    <label for="addition-duration">Addiction Duration</label>
+    <input
+      type="number"
+      formControlName="momahidAddictionDuration"
+      id="momahid-addition-duration"
+    />
+  </div>
+
+  <!-- How did you momahid find out the porn -->
+  <div class="form-input">
+    <label for="porn-discovery">How did you find out about porn</label>
+    <textarea
+      formControlName="momahidPornDiscovery"
+      id="porn-discovery"
+      placeholder="is it by coincidence, or someone show it to you, ..."
+    ></textarea>
+  </div>
+  <hr />
+
+  <!-- Major previous steps you've taken to quit porn -->
+  <div class="form-input">
+    <label for="previous-failed-attempts">
+      Previous failed attempts for quieting porn
+    </label>
+    <textarea
+      formControlName="previousFailedAttempts"
+      id="previous-failed-attempts"
+    ></textarea>
+  </div>
+
+  <!-- Describe your life during the time you were addicted to porn. -->
+  <div class="form-input">
+    <label for="life-during-addiction">
+      Describe your life during the time you were addicted to porn
+    </label>
+    <textarea
+      formControlName="lifeDuringAddiction"
+      id="life-during-addiction"
+    ></textarea>
+  </div>
+
+  <hr />
+
+  <!-- Describe your life after true Tawbah -->
+  <div class="form-input">
+    <label for="life-after-true-tawbah">
+      Describe your life after true tawbah
+    </label>
+    <textarea
+      formControlName="lifeAfterTrueTawbah"
+      id="life-after-true-tawbah"
+    ></textarea>
+  </div>
+
+  <!-- What Are the major worships that helped the most in healing your heart -->
+  <div class="form-input">
+    <label for="major-worships-for-heart-recovery">
+      What are the major worships that you feel that helped the most in healing
+      your heart
+    </label>
+    <textarea
+      formControlName="majorWorshipsThatHealedTheHeart"
+      id="major-worships-for-heart-recovery"
+    ></textarea>
+  </div>
+
+  <!-- ############# -->
+  <div class="form-input">
+    <label for="previous-deadly-sins">
+      What are the major sins that you feel that had the most bad effect on your
+      heart
+    </label>
+    <textarea
+      formControlName="majorSinsThatPoisonedTheHeart"
+      id="major-sins-that-poisoned-the-heart"
+    >
+    </textarea>
+  </div>
+
+  <!-- ######### -->
+  <div class="form-input">
+    <label for="message-for-momahid-brothers">
+      Is there anything you would say to your Muslim brothers, about addiction,
+      or about anything
+    </label>
+    <textarea name="" id="message-for-momahid-brothers"></textarea>
+  </div>
+  <!-- Submit Button -->
+  <div>
+    <button type="submit" (click)="submitMomahidRequest()">Submit</button>
+  </div>
+</form>
