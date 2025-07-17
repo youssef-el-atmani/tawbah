@@ -11,6 +11,19 @@
     <input type="text" id="momahid-age" formControlName="momahidAge" />
   </div>
 
+  <!-- Country of Residence -->
+  <label for="country-of-residence">Country of Residence</label>
+  <ng-select
+    id="country-of-residence"
+    formControlName="momahidCountry"
+    [items]="arWorldCountries"
+    bindLabel=""
+    placeholder="اختر دولة..."
+    [searchable]="true"
+    class="form-select"
+  >
+  </ng-select>
+
   <!-- Nature of work or Study -->
   <div class="form-input">
     <label for="nature-of-work">The nature of work or study</label>
