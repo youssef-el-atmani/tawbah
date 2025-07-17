@@ -43,6 +43,7 @@ export class JoinMomahidounComponent {
   momahidForm: FormGroup = new FormGroup({
     momahidName: new FormControl(),
     momahidAge: new FormControl(),
+    momahidCountry: new FormControl(),
     momahidTypeOfWorkStudy: new FormControl(),
     // ----
     momahidAgeWhenFirstInteractWithPorn: new FormControl(),
