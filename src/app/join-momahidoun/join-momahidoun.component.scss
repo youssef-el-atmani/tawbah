@@ -3,3 +3,12 @@
   flex-direction: column;
   margin-top: 21px;
 }
+::ng-deep ng-select {
+  width: 100%;
+}
+::ng-deep ng-select .ng-dropdown-panel {
+  background-color: white;
+  z-index: 1050;
+  border: 1px solid #ced4da;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
