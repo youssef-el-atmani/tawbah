@@ -47,12 +47,27 @@ export class JoinMomahidounComponent {
     isMomahidStudy: new FormControl(),
     momahidCountry: new FormControl(),
     momahidTypeOfWorkStudy: new FormControl(),
+
     // ----
     momahidAgeWhenFirstInteractWithPorn: new FormControl(),
     momahidAddictionDuration: new FormControl(),
     momahidPornDiscovery: new FormControl(),
+
+    // ----
     previousFailedAttempts: new FormControl(),
     lifeDuringAddiction: new FormControl(),
+    // withdrawal symptoms
+    cravingToWatchPorn: new FormControl(false),
+    sexWakingDreams: new FormControl(false),
+    pornScenesCrossMind: new FormControl(false),
+
+    fastAnger: new FormControl(false),
+    exaggeratedSensitivity: new FormControl(false),
+
+    laziness: new FormControl(false),
+
+    delirium: new FormControl(false),
+
     // ----
     lifeAfterTrueTawbah: new FormControl(),
     majorWorshipsThatHealedTheHeart: new FormControl(),
