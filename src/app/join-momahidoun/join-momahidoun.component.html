@@ -1,17 +1,17 @@
 <form [formGroup]="momahidForm" action="">
-  <!-- Name -->
+  <!-- Momahid Name -->
   <div class="form-input">
     <label for="momahid-name">Name</label>
     <input type="text" id="momahid-name" formControlName="momahidName" />
   </div>
 
-  <!-- Age -->
+  <!-- Momahid Age -->
   <div class="form-input">
     <label for="momahid-age">How old are you</label>
     <input type="number" id="momahid-age" formControlName="momahidAge" />
   </div>
 
-  <!-- Marriage Status -->
+  <!-- Momahid Marriage Status -->
   <div class="form-input">
     <fieldset>
       <legend>Are You Married</legend>
@@ -33,7 +33,7 @@
     </fieldset>
   </div>
 
-  <!-- Work/Study status -->
+  <!-- Momahid Work/Study status -->
   <div class="form-input">
     <fieldset>
       <legend>Are you currently studying or working?</legend>
@@ -55,7 +55,7 @@
     </fieldset>
   </div>
 
-  <!-- Country of Residence -->
+  <!-- Momahid Country of Residence -->
   <label for="country-of-residence">Country of Residence</label>
   <ng-select
     id="country-of-residence"
@@ -68,7 +68,7 @@
   >
   </ng-select>
 
-  <!-- Nature of work or Study -->
+  <!-- Momahid Nature/type of work or Study -->
   <div class="form-input">
     <label for="nature-of-work">The nature of work or study</label>
     <textarea
@@ -80,9 +80,9 @@
 
   <!-- First Porn Interaction Age -->
   <div class="form-input">
-    <label for="momahid-age-first-interaction"
-      >How old were you when you first used porn</label
-    >
+    <label for="momahid-age-first-interaction">
+      How old were you when you first used porn
+    </label>
     <input
       type="number"
       id="momahid-age-first-interaction"
@@ -100,7 +100,7 @@
     />
   </div>
 
-  <!-- How did you momahid find out the porn -->
+  <!-- How did Momahid find out about porn -->
   <div class="form-input">
     <label for="porn-discovery">How did you find out about porn</label>
     <textarea
@@ -111,7 +111,7 @@
   </div>
   <hr />
 
-  <!-- Major previous steps you've taken to quit porn -->
+  <!-- Major previous steps Momahid have taken to quit porn -->
   <div class="form-input">
     <label for="previous-failed-attempts">
       Previous failed attempts for quieting porn
@@ -122,7 +122,7 @@
     ></textarea>
   </div>
 
-  <!-- Describe your life during the time you were addicted to porn. -->
+  <!-- Momahid Life description when he was addicted to porn -->
   <div class="form-input">
     <label for="life-during-addiction">
       Describe your life during the time you were addicted to porn
@@ -135,7 +135,7 @@
 
   <hr />
 
-  <!-- Describe your life after true Tawbah -->
+  <!-- Momahid life description after Tawbah -->
   <div class="form-input">
     <label for="life-after-true-tawbah">
       Describe your life after true tawbah
@@ -146,7 +146,7 @@
     ></textarea>
   </div>
 
-  <!-- What Are the major worships that helped the most in healing your heart -->
+  <!-- What Are the major worships that helped the most in healing Momahid heart -->
   <div class="form-input">
     <label for="major-worships-for-heart-recovery">
       What are the major worships that you feel that helped the most in healing
@@ -158,7 +158,7 @@
     ></textarea>
   </div>
 
-  <!-- ############# -->
+  <!-- The major sins that was poisoning the Momahid Heart in the past -->
   <div class="form-input">
     <label for="previous-deadly-sins">
       What are the major sins that you feel that had the most bad effect on your
@@ -171,7 +171,7 @@
     </textarea>
   </div>
 
-  <!-- ######### -->
+  <!-- Momahid message to his Muslims Brothers -->
   <div class="form-input">
     <label for="message-for-momahid-brothers">
       Is there anything you would say to your Muslim brothers, about addiction,
@@ -182,6 +182,7 @@
       id="message-for-momahid-brothers"
     ></textarea>
   </div>
+
   <!-- Submit Button -->
   <div>
     <button type="submit" (click)="submitMomahidRequest()">Submit</button>
