@@ -44,6 +44,7 @@ export class JoinMomahidounComponent {
     momahidName: new FormControl(),
     momahidAge: new FormControl(),
     isMomahidMarried: new FormControl(),
+    isMomahidStudy: new FormControl(),
     momahidCountry: new FormControl(),
     momahidTypeOfWorkStudy: new FormControl(),
     // ----

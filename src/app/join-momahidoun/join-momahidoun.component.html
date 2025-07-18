@@ -33,6 +33,28 @@
     </fieldset>
   </div>
 
+  <!-- Work/Study status -->
+  <div class="form-input">
+    <fieldset>
+      <legend>Are you currently studying or working?</legend>
+      <input
+        type="radio"
+        formControlName="isMomahidStudy"
+        id="momahid-is-studying"
+        [value]="true"
+      />
+      <label for="momahid-is-studying">I'm studying</label>
+
+      <input
+        type="radio"
+        formControlName="isMomahidStudy"
+        id="momahid-is-working"
+        [value]="false"
+      />
+      <label for="momahid-is-working">I'm working</label>
+    </fieldset>
+  </div>
+
   <!-- Country of Residence -->
   <label for="country-of-residence">Country of Residence</label>
   <ng-select
