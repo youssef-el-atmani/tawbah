@@ -4,12 +4,14 @@ import {
   NgSelectComponent,
 } from '@ng-select/ng-select';
 import { HttpClient } from '@angular/common/http';
-import { Component } from '@angular/core';
+import { Component, inject } from '@angular/core';
 import {
   FormControl,
   FormGroup,
   ReactiveFormsModule,
   Validators,
+  FormArray,
+  FormBuilder,
 } from '@angular/forms';
 
 @Component({
@@ -40,6 +42,8 @@ export class JoinMomahidounComponent {
   // majorSinsThatPoisonedTheHeart = new FormControl();
   // messageForMomahidBrother = new FormControl();
 
+  private formBuilder = inject(FormBuilder);
+
   momahidForm: FormGroup = new FormGroup({
     momahidName: new FormControl(),
     momahidAge: new FormControl(),
@@ -67,6 +71,9 @@ export class JoinMomahidounComponent {
     laziness: new FormControl(false),
 
     delirium: new FormControl(false),
+
+    // Dynamic withdrawals symptoms added by the momahid if he has any
+    additionalWithdrawalSymptoms: this.formBuilder.array([]),
 
     // ----
     lifeAfterTrueTawbah: new FormControl(),
@@ -326,6 +333,24 @@ export class JoinMomahidounComponent {
     'جنوب السودان',
     'كوسوفو',
   ];
+
+  // For generating dynamic withdrawal symptoms inputs
+  get additionalWithdrawalSymptoms(): FormArray {
+    return this.momahidForm.get('additionalWithdrawalSymptoms') as FormArray;
+  }
+
+  addWithdrawalSymptom() {
+    this.additionalWithdrawalSymptoms.push(this.formBuilder.control(''));
+  }
+
+  // For removing the new created input fields for the additionalWithdrawalSymptoms
+  removeWithdrawalSymptom(index: number) {
+    this.additionalWithdrawalSymptoms.removeAt(index);
+  }
+
+  // #########################################
+  // Submitting The Form
+  // #########################################
   constructor(private http: HttpClient) {}
 
   submitMomahidRequest() {

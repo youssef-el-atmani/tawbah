@@ -12,3 +12,20 @@
   border: 1px solid #ced4da;
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
 }
+
+.wide-text-area {
+  display: flex;
+
+  textarea {
+    flex: 1;
+  }
+}
+
+.removing-new-withdrawal-btn {
+  cursor: pointer;
+  padding: 3px;
+  background-color: #facdcd;
+  margin: 1px 2px;
+  border: 2px solid rgb(80, 79, 79);
+  border-radius: 5px;
+}

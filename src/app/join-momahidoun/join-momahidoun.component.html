@@ -213,6 +213,35 @@
         controlled or stopped.
       </label>
     </div>
+
+    <!-- Give the momahid the ability to add additional withdrawal symptoms -->
+    <div formArrayName="additionalWithdrawalSymptoms">
+      @for (withdrawalSymptom of additionalWithdrawalSymptoms.controls; track
+      $index; let i = $index) {
+      <div class="wide-text-area">
+        <textarea
+          lang="ar"
+          [formControlName]="i"
+          placeholder="Enter a Withdrawal Symptom"
+        ></textarea>
+        <button  
+        class="removing-new-withdrawal-btn"
+        type="button" (click)="removeWithdrawalSymptom(i)">
+          <img
+            src="icons/others/delete-icon.png"
+            alt="rubbish bin icon"
+            width="30px"
+            height="30px"
+          />
+        </button>
+      </div>
+      }
+      <div>
+        <button type="button" (click)="addWithdrawalSymptom()">
+          Add Other Withdrawal Symptom
+        </button>
+      </div>
+    </div>
   </fieldset>
 
   <hr />
