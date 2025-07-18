@@ -11,6 +11,28 @@
     <input type="number" id="momahid-age" formControlName="momahidAge" />
   </div>
 
+  <!-- Marriage Status -->
+  <div class="form-input">
+    <fieldset>
+      <legend>Are You Married</legend>
+      <input
+        type="radio"
+        formControlName="isMomahidMarried"
+        id="married-momahid"
+        [value]="true"
+      />
+      <label for="married-momahid">Yes, I'm married</label>
+
+      <input
+        type="radio"
+        formControlName="isMomahidMarried"
+        id="single-momahid"
+        [value]="false"
+      />
+      <label for="single-momahid">No, I'm single</label>
+    </fieldset>
+  </div>
+
   <!-- Country of Residence -->
   <label for="country-of-residence">Country of Residence</label>
   <ng-select
