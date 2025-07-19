@@ -28,24 +28,30 @@
     <fieldset>
       <legend>هل أنت متزوج؟</legend>
 
-      <div>
+      <div class="form-check">
         <input
           type="radio"
           formControlName="isMomahidMarried"
           id="married-momahid"
           [value]="true"
+          class="form-check-input"
         />
-        <label for="married-momahid" class="form-label"> أجل، أنا متزوج </label>
+        <label for="married-momahid" class="form-check-label">
+          أجل، أنا متزوج
+        </label>
       </div>
 
-      <div>
+      <div class="form-check">
         <input
           type="radio"
           formControlName="isMomahidMarried"
           id="single-momahid"
           [value]="false"
+          class="form-check-input"
         />
-        <label for="single-momahid" class="form-label">لا، أنا عازب</label>
+        <label for="single-momahid" class="form-check-label">
+          لا، أنا عازب
+        </label>
       </div>
     </fieldset>
   </div>
@@ -55,24 +61,30 @@
     <fieldset>
       <legend>هل أنت تدرس أم تشتغل؟</legend>
 
-      <div>
+      <div class="form-check">
         <input
           type="radio"
           formControlName="isMomahidStudy"
           id="momahid-is-studying"
           [value]="true"
+          class="form-check-input"
         />
-        <label for="momahid-is-studying" class="form-label">أنا أدرس</label>
+        <label for="momahid-is-studying" class="form-check-label">
+          أنا أدرس
+        </label>
       </div>
 
-      <div>
+      <div class="form-check">
         <input
           type="radio"
           formControlName="isMomahidStudy"
           id="momahid-is-working"
           [value]="false"
+          class="form-check-input"
         />
-        <label for="momahid-is-working" class="form-label">أنا أشتغل</label>
+        <label for="momahid-is-working" class="form-check-label">
+          أنا أشتغل
+        </label>
       </div>
     </fieldset>
   </div>
