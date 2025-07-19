@@ -26,22 +26,6 @@ import {
   styleUrl: './join-momahidoun.component.scss',
 })
 export class JoinMomahidounComponent {
-  // ----
-  // momahidName = new FormControl();
-  // momahidAge = new FormControl();
-  // momahidTypeOfWorkStudy = new FormControl();
-  // // ----
-  // momahidAgeWhenFirstInteractWithPorn = new FormControl();
-  // momahidAddictionDuration = new FormControl();
-  // momahidPornDiscovery = new FormControl();
-  // previousFailedAttempts = new FormControl();
-  // lifeDuringAddiction = new FormControl();
-  // // ----
-  // lifeAfterTrueTawbah = new FormControl();
-  // majorWorshipsThatHealedTheHeart = new FormControl();
-  // majorSinsThatPoisonedTheHeart = new FormControl();
-  // messageForMomahidBrother = new FormControl();
-
   private formBuilder = inject(FormBuilder);
 
   momahidForm: FormGroup = new FormGroup({
