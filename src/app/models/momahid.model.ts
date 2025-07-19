@@ -7,9 +7,9 @@ export interface Momahid {
   /** Always 'ar' for now */
   pageLanguage: PageLanguage;
 
-  isStoryVerified: boolean;
-
   isStoryApproved: boolean;
+  
+  isStoryVerified: boolean;
 
   // -------
   momahidPhoto: string;
