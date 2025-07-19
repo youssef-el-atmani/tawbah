@@ -175,7 +175,7 @@
   </div>
 
   <!-- withdrawal symptoms -->
-  <fieldset>
+  <fieldset class="form-check">
     <legend>
       ما هي أبرز الأعراض الإنسحابية التي عانيت منها عندما كنت تبتعد عن الإباحية
       في محاولاتك السابقة
@@ -186,10 +186,11 @@
         type="checkbox"
         formControlName="cravingToWatchPorn"
         id="craving-to-watch-porn"
+        class="form-check-input"
       />
-      <label for="craving-to-watch-porn" class="form-label"
-        >رغبة ملحة في العودة للإباحية</label
-      >
+      <label for="craving-to-watch-porn" class="form-check-label">
+        رغبة ملحة في العودة للإباحية
+      </label>
     </div>
 
     <div>
@@ -197,8 +198,11 @@
         type="checkbox"
         formControlName="sexWakingDreams"
         id="sex-waking-dreams"
+        class="form-check-input"
       />
-      <label for="sex-waking-dreams" class="form-label">أحلام يقضة جنسية</label>
+      <label for="sex-waking-dreams" class="form-check-label">
+        أحلام يقظة جنسية
+      </label>
     </div>
 
     <div>
@@ -206,8 +210,9 @@
         type="checkbox"
         formControlName="pornScenesCrossMind"
         id="porn-scenes-cross-mind"
+        class="form-check-input"
       />
-      <label for="porn-scenes-cross-mind" class="form-label">
+      <label for="porn-scenes-cross-mind" class="form-check-label">
         تذكر مشاهد اباحية سبق لك مشاهدتها واستثارتك بها
       </label>
     </div>
@@ -215,8 +220,13 @@
     <br />
 
     <div>
-      <input type="checkbox" formControlName="fastAnger" id="fast-anger" />
-      <label for="fast-anger" class="form-label">غضب سريع</label>
+      <input
+        type="checkbox"
+        formControlName="fastAnger"
+        id="fast-anger"
+        class="form-check-input"
+      />
+      <label for="fast-anger" class="form-check-label">غضب سريع</label>
     </div>
 
     <div>
@@ -224,8 +234,9 @@
         type="checkbox"
         formControlName="exaggeratedSensitivity"
         id="exaggerated-sensitivity"
+        class="form-check-input"
       />
-      <label for="exaggerated-sensitivity" class="form-label">
+      <label for="exaggerated-sensitivity" class="form-check-label">
         حساسية مبالغ فيها تجاه أمور بسيطة وحقيرة، كلمة من أحد مثلا قد لا يقصد
         بها أي شيئ
       </label>
@@ -234,15 +245,25 @@
     <br />
 
     <div>
-      <input type="checkbox" formControlName="laziness" id="laziness" />
-      <label for="laziness" class="form-label">كسل حادّ</label>
+      <input
+        type="checkbox"
+        formControlName="laziness"
+        id="laziness"
+        class="form-check-input"
+      />
+      <label for="laziness" class="form-check-label">كسل حادّ</label>
     </div>
 
     <br />
 
     <div>
-      <input type="checkbox" formControlName="delirium" id="delirium" />
-      <label for="delirium" class="form-label">
+      <input
+        type="checkbox"
+        formControlName="delirium"
+        id="delirium"
+        class="form-check-input"
+      />
+      <label for="delirium" class="form-check-label">
         الهذيان: أفكار --بكل أنواعها-- لا تستطيع دفعها ولا تغييرها ولا التخلص
         منها، تشغل تفكيرك، ويصبح التركير امرا غير ممكن
       </label>
