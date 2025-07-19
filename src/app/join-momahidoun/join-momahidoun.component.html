@@ -1,7 +1,9 @@
 <form lang="ar" [formGroup]="momahidForm" action="">
   <!-- Momahid Name -->
   <div class="form-input">
-    <label for="momahid-name">ما هو إسمك الكامل؟ (قم بكتابة إسمك الأول فقط إن لم ترد أن تُعرف)</label>
+    <label lang="ar" for="momahid-name"
+      >ما هو إسمك الكامل؟ (قم بكتابة إسمك الأول فقط إن لم تُرد أن تُعرف)</label
+    >
     <input type="text" id="momahid-name" formControlName="momahidName" />
   </div>
 
@@ -12,7 +14,7 @@
   </div>
 
   <!-- Momahid Marriage Status -->
-  <div class="form-input">
+  <div>
     <fieldset>
       <legend>هل أنت متزوج؟</legend>
 
@@ -39,7 +41,7 @@
   </div>
 
   <!-- Momahid Work/Study status -->
-  <div class="form-input">
+  <div>
     <fieldset>
       <legend>هل أنت تدرس أم تشتغل؟</legend>
 
@@ -134,6 +136,7 @@
     <textarea
       formControlName="previousFailedAttempts"
       id="previous-failed-attempts"
+      rows="5"
     ></textarea>
   </div>
 
@@ -146,6 +149,7 @@
     <textarea
       formControlName="lifeDuringAddiction"
       id="life-during-addiction"
+      rows="5"
     ></textarea>
   </div>
 
@@ -263,6 +267,7 @@
     <textarea
       formControlName="lifeAfterTrueTawbah"
       id="life-after-true-tawbah"
+      rows="5"
     ></textarea>
   </div>
 
@@ -275,6 +280,7 @@
     <textarea
       formControlName="majorWorshipsThatHealedTheHeart"
       id="major-worships-for-heart-recovery"
+      rows="3"
     ></textarea>
   </div>
 
@@ -287,6 +293,7 @@
     <textarea
       formControlName="majorSinsThatPoisonedTheHeart"
       id="major-sins-that-poisoned-the-heart"
+      rows="3"
     >
     </textarea>
   </div>
@@ -300,6 +307,7 @@
     <textarea
       formControlName="messageForMomahidBrother"
       id="message-for-momahid-brothers"
+      rows="5"
     ></textarea>
   </div>
 
