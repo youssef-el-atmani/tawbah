@@ -9,17 +9,54 @@ export interface Momahid {
 
   isStoryVerified: boolean;
 
+  isStoryApproved: boolean;
+
+  // -------
   momahidPhoto: string;
 
   momahidName: string;
 
   momahidAge: number;
 
-  momahidCountry: string;
+  isMomahidMarried: boolean;
 
   isMomahidStudy: boolean;
 
-  isMomahidMarried: boolean;
+  momahidCountry: string;
+
+  momahidTypeOfWorkStudy: string;
+
+  // ---------
+  momahidAgeWhenFirstInteractWithPorn: number;
 
   momahidAddictionDuration: number;
+
+  momahidPornDiscovery: string;
+
+  // --------
+  previousFailedAttempts: string;
+
+  lifeDuringAddiction: string;
+
+  // withdrawal symptoms
+  cravingToWatchPorn: boolean;
+  sexWakingDreams: boolean;
+  pornScenesCrossMind: boolean;
+
+  fastAnger: boolean;
+  exaggeratedSensitivity: boolean;
+
+  laziness: boolean;
+
+  delirium: boolean;
+
+  additionalWithdrawalSymptoms: [];
+
+  // -------
+  lifeAfterTrueTawbah: string;
+  majorWorshipsThatHealedTheHeart: string;
+  majorSinsThatPoisonedTheHeart: string;
+
+  // -------
+  messageForMomahidBrother: string;
 }
