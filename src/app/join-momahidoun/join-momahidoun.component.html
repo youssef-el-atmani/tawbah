@@ -1,16 +1,26 @@
 <form lang="ar" [formGroup]="momahidForm" action="">
   <!-- Momahid Name -->
   <div class="form-input">
-    <label lang="ar" for="momahid-name"
-      >ما هو إسمك الكامل؟ (قم بكتابة إسمك الأول فقط إن لم تُرد أن تُعرف)</label
-    >
-    <input type="text" id="momahid-name" formControlName="momahidName" />
+    <label lang="ar" for="momahid-name" class="form-label">
+      ما هو إسمك الكامل؟ (قم بكتابة إسمك الأول فقط إن لم تُرد أن تُعرف)
+    </label>
+    <input
+      type="text"
+      id="momahid-name"
+      formControlName="momahidName"
+      class="form-control"
+    />
   </div>
 
   <!-- Momahid Age -->
   <div class="form-input">
-    <label for="momahid-age">كم يبلغ عمرك؟</label>
-    <input type="number" id="momahid-age" formControlName="momahidAge" />
+    <label for="momahid-age" class="form-label">كم يبلغ عمرك؟</label>
+    <input
+      type="number"
+      id="momahid-age"
+      formControlName="momahidAge"
+      class="form-control"
+    />
   </div>
 
   <!-- Momahid Marriage Status -->
@@ -25,7 +35,7 @@
           id="married-momahid"
           [value]="true"
         />
-        <label for="married-momahid">أجل، أنا متزوج</label>
+        <label for="married-momahid" class="form-label"> أجل، أنا متزوج </label>
       </div>
 
       <div>
@@ -35,7 +45,7 @@
           id="single-momahid"
           [value]="false"
         />
-        <label for="single-momahid">لا، أنا عازب</label>
+        <label for="single-momahid" class="form-label">لا، أنا عازب</label>
       </div>
     </fieldset>
   </div>
@@ -52,7 +62,7 @@
           id="momahid-is-studying"
           [value]="true"
         />
-        <label for="momahid-is-studying">أنا أدرس</label>
+        <label for="momahid-is-studying" class="form-label">أنا أدرس</label>
       </div>
 
       <div>
@@ -62,7 +72,7 @@
           id="momahid-is-working"
           [value]="false"
         />
-        <label for="momahid-is-working">أنا أشتغل</label>
+        <label for="momahid-is-working" class="form-label">أنا أشتغل</label>
       </div>
     </fieldset>
   </div>
@@ -77,46 +87,54 @@
     placeholder="اختر دولة إقامتك"
     [searchable]="true"
     class="form-select"
+    class="form-select"
   >
   </ng-select>
 
   <!-- Momahid Nature/type of work or Study -->
   <div class="form-input">
-    <label for="nature-of-work">ما هي طبيعة دراستك\عملك ؟</label>
+    <label for="nature-of-work" class="form-label">
+      ما هي طبيعة دراستك\عملك ؟
+    </label>
     <textarea
       formControlName="momahidTypeOfWorkStudy"
       id="nature-of-work"
       placeholder="أدرس في الثانوية … تدرس البرمجة في الجامعة … تدرس الطب في الجامعة … تشتغل في التجارة … تشتغل سائق شاحنة"
+      class="form-control"
     ></textarea>
   </div>
   <hr />
 
   <!-- First Porn Interaction Age -->
   <div class="form-input">
-    <label for="momahid-age-first-interaction">
+    <label for="momahid-age-first-interaction" class="form-label">
       كم كان عمرك عند أول اتصال بالإباحية ؟
     </label>
     <input
       type="number"
       id="momahid-age-first-interaction"
       formControlName="momahidAgeWhenFirstInteractWithPorn"
+      class="form-control"
     />
   </div>
 
   <!-- Addiction Duration -->
   <div class="form-input">
-    <label for="addition-duration">كم بلغت مدت إدمانك ؟</label>
+    <label for="addition-duration" class="form-label">
+      كم بلغت مدت إدمانك ؟
+    </label>
     <input
       type="number"
       formControlName="momahidAddictionDuration"
       id="momahid-addition-duration"
       placeholder="هل أنت مدمن على المقاطع الاباحية لسنة أم سنتين أم سبع سنوات أم كم؟"
+      class="form-control"
     />
   </div>
 
   <!-- How did Momahid find out about porn -->
   <div class="form-input">
-    <label for="porn-discovery">
+    <label for="porn-discovery" class="form-label">
       كيف عرفت الإباحية؟، هل كان الأمر صدفة أم أخبرك أحد ما، أم عرفتها بطريقة
       أخرى
     </label>
@@ -124,25 +142,27 @@
       formControlName="momahidPornDiscovery"
       id="porn-discovery"
       placeholder="مثلا: عرّفني على الإباحية زميل بالمدرسة"
+      class="form-control"
     ></textarea>
   </div>
   <hr />
 
   <!-- Major previous steps Momahid have taken to quit porn -->
   <div class="form-input">
-    <label for="previous-failed-attempts">
+    <label for="previous-failed-attempts" class="form-label">
       هلاّ ذكرت بعض أهم محاولاتك السابقة في التخلص من ادمان الإباحية؟
     </label>
     <textarea
       formControlName="previousFailedAttempts"
       id="previous-failed-attempts"
       rows="5"
+      class="form-control"
     ></textarea>
   </div>
 
   <!-- Momahid Life description when he was addicted to porn -->
   <div class="form-input">
-    <label for="life-during-addiction">
+    <label for="life-during-addiction" class="form-label">
       هل بإمكانك أن تصف حالك ووضعك عندما كنت مدمنا على الإباحية، كيف كانت حياتك
       ؟
     </label>
@@ -150,6 +170,7 @@
       formControlName="lifeDuringAddiction"
       id="life-during-addiction"
       rows="5"
+      class="form-control"
     ></textarea>
   </div>
 
@@ -166,7 +187,9 @@
         formControlName="cravingToWatchPorn"
         id="craving-to-watch-porn"
       />
-      <label for="craving-to-watch-porn">رغبة ملحة في العودة للإباحية</label>
+      <label for="craving-to-watch-porn" class="form-label"
+        >رغبة ملحة في العودة للإباحية</label
+      >
     </div>
 
     <div>
@@ -175,7 +198,7 @@
         formControlName="sexWakingDreams"
         id="sex-waking-dreams"
       />
-      <label for="sex-waking-dreams">أحلام يقضة جنسية</label>
+      <label for="sex-waking-dreams" class="form-label">أحلام يقضة جنسية</label>
     </div>
 
     <div>
@@ -184,7 +207,7 @@
         formControlName="pornScenesCrossMind"
         id="porn-scenes-cross-mind"
       />
-      <label for="porn-scenes-cross-mind">
+      <label for="porn-scenes-cross-mind" class="form-label">
         تذكر مشاهد اباحية سبق لك مشاهدتها واستثارتك بها
       </label>
     </div>
@@ -193,7 +216,7 @@
 
     <div>
       <input type="checkbox" formControlName="fastAnger" id="fast-anger" />
-      <label for="fast-anger">غضب سريع</label>
+      <label for="fast-anger" class="form-label">غضب سريع</label>
     </div>
 
     <div>
@@ -202,7 +225,7 @@
         formControlName="exaggeratedSensitivity"
         id="exaggerated-sensitivity"
       />
-      <label for="exaggerated-sensitivity">
+      <label for="exaggerated-sensitivity" class="form-label">
         حساسية مبالغ فيها تجاه أمور بسيطة وحقيرة، كلمة من أحد مثلا قد لا يقصد
         بها أي شيئ
       </label>
@@ -212,14 +235,14 @@
 
     <div>
       <input type="checkbox" formControlName="laziness" id="laziness" />
-      <label for="laziness">كسل حادّ</label>
+      <label for="laziness" class="form-label">كسل حادّ</label>
     </div>
 
     <br />
 
     <div>
       <input type="checkbox" formControlName="delirium" id="delirium" />
-      <label for="delirium">
+      <label for="delirium" class="form-label">
         الهذيان: أفكار --بكل أنواعها-- لا تستطيع دفعها ولا تغييرها ولا التخلص
         منها، تشغل تفكيرك، ويصبح التركير امرا غير ممكن
       </label>
@@ -234,6 +257,7 @@
           lang="ar"
           [formControlName]="i"
           placeholder="أكتب العَرَض الإنسحابي"
+          class="form-control"
         ></textarea>
         <button
           class="removing-new-withdrawal-btn"
@@ -261,19 +285,20 @@
 
   <!-- Momahid life description after Tawbah -->
   <div class="form-input">
-    <label for="life-after-true-tawbah">
+    <label for="life-after-true-tawbah" class="form-label">
       هلّا وصفت حالك بعد التوبة النصوح، كيف صارت حياتك ؟
     </label>
     <textarea
       formControlName="lifeAfterTrueTawbah"
       id="life-after-true-tawbah"
       rows="5"
+      class="form-control"
     ></textarea>
   </div>
 
   <!-- What Are the major worships that helped the most in healing Momahid heart -->
   <div class="form-input">
-    <label for="major-worships-for-heart-recovery">
+    <label for="major-worships-for-heart-recovery" class="form-label">
       ما هي أهم الطاعات والعبادات التي شعرت أنها كانت لها سببا كبيرا في تعافي
       قلبك ؟
     </label>
@@ -281,12 +306,13 @@
       formControlName="majorWorshipsThatHealedTheHeart"
       id="major-worships-for-heart-recovery"
       rows="3"
+      class="form-control"
     ></textarea>
   </div>
 
   <!-- The major sins that was poisoning the Momahid Heart in the past -->
   <div class="form-input">
-    <label for="previous-deadly-sins">
+    <label for="previous-deadly-sins" class="form-label">
       ما هي الذنوب التي كنت تسقط فيها كثيرا، والتي ترجح أنها كانت السبب وراء
       تسمم قلبك فيما مضى، ولعلك لم تكن منتبها لها ؟
     </label>
@@ -294,13 +320,14 @@
       formControlName="majorSinsThatPoisonedTheHeart"
       id="major-sins-that-poisoned-the-heart"
       rows="3"
+      class="form-control"
     >
     </textarea>
   </div>
 
   <!-- Momahid message to his Muslims Brothers -->
   <div class="form-input">
-    <label for="message-for-momahid-brothers">
+    <label for="message-for-momahid-brothers" class="form-label">
       هل هناك أمر آخر ترغب في إضافته؟؛ ملاحظة، نصيحة .. أو أي شيئ قد يكون مفيدا
       للشباب أن يطّلعوا عليه
     </label>
@@ -308,6 +335,7 @@
       formControlName="messageForMomahidBrother"
       id="message-for-momahid-brothers"
       rows="5"
+      class="form-control"
     ></textarea>
   </div>
 
