@@ -4,7 +4,8 @@ import {
   NgSelectComponent,
 } from '@ng-select/ng-select';
 import { HttpClient } from '@angular/common/http';
-import { Component, inject } from '@angular/core';
+import { Component, inject, OnInit } from '@angular/core';
+
 import {
   FormControl,
   FormGroup,
@@ -25,8 +26,10 @@ import {
   templateUrl: './join-momahidoun.component.html',
   styleUrl: './join-momahidoun.component.scss',
 })
-export class JoinMomahidounComponent {
+export class JoinMomahidounComponent implements OnInit {
   private formBuilder = inject(FormBuilder);
+
+  numberOfExistingMomahidoun = 0;
 
   momahidForm: FormGroup = new FormGroup({
     momahidName: new FormControl(),
@@ -338,11 +341,28 @@ export class JoinMomahidounComponent {
   constructor(private http: HttpClient) {}
 
   submitMomahidRequest() {
-    const obj = this.momahidForm.value;
+    const storyMacroInfo = {
+      // Because Ids starting from 0,
+      // always the new-id will be equal to the number of existing momahidoun
+      id: this.numberOfExistingMomahidoun,
+      isStoryVerified: false,
+      isStoryApproved: false,
+      pageLanguage: 'ar',
+    };
+    const momahidFormInput = this.momahidForm.value;
 
-    console.log(obj);
+    const newMomahidData = { ...storyMacroInfo, ...momahidFormInput };
+
     this.http
-      .post('http://localhost:3000/al-momahidoun', obj)
+      .post('http://localhost:3000/al-momahidoun', newMomahidData)
       .subscribe((res: any) => alert('The requested saved successfully!'));
+  }
+
+  ngOnInit(): void {
+    this.http
+      .get<any[]>('http://localhost:3000/al-momahidoun')
+      .subscribe((data) => {
+        this.numberOfExistingMomahidoun = data.length;
+      });
   }
 }
