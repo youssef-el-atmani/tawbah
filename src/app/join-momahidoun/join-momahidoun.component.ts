@@ -345,9 +345,9 @@ export class JoinMomahidounComponent implements OnInit {
       // Because Ids starting from 0,
       // always the new-id will be equal to the number of existing momahidoun
       id: this.numberOfExistingMomahidoun,
-      isStoryVerified: false,
-      isStoryApproved: false,
       pageLanguage: 'ar',
+      isStoryApproved: false,
+      isStoryVerified: false,
     };
     const momahidFormInput = this.momahidForm.value;
 
