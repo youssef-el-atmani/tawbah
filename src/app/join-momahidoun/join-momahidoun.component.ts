@@ -56,6 +56,7 @@ export class JoinMomahidounComponent implements OnInit {
     exaggeratedSensitivity: new FormControl(false),
 
     laziness: new FormControl(false),
+    overeating: new FormControl(false),
 
     delirium: new FormControl(false),
 
