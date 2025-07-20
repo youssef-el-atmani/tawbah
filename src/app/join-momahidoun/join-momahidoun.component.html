@@ -1,381 +1,365 @@
 <form lang="ar" [formGroup]="momahidForm" action="">
   <!-- Momahid Name -->
-  <div class="form-input">
-    <label lang="ar" for="momahid-name" class="form-label">
-      ما هو إسمك الكامل؟ (قم بكتابة إسمك الأول فقط إن لم تُرد أن تُعرف)
-    </label>
-    <input
-      type="text"
-      id="momahid-name"
-      formControlName="momahidName"
-      class="form-control"
-    />
-  </div>
-
-  <!-- Momahid Age -->
-  <div class="form-input">
-    <label for="momahid-age" class="form-label">كم يبلغ عمرك؟</label>
-    <input
-      type="number"
-      id="momahid-age"
-      formControlName="momahidAge"
-      class="form-control"
-    />
-  </div>
-
-  <!-- Momahid Marriage Status -->
-  <div>
-    <fieldset>
-      <legend>هل أنت متزوج؟</legend>
-
-      <div class="form-check">
-        <input
-          type="radio"
-          formControlName="isMomahidMarried"
-          id="married-momahid"
-          [value]="true"
-          class="form-check-input"
-        />
-        <label for="married-momahid" class="form-check-label">
-          أجل، أنا متزوج
-        </label>
-      </div>
-
-      <div class="form-check">
-        <input
-          type="radio"
-          formControlName="isMomahidMarried"
-          id="single-momahid"
-          [value]="false"
-          class="form-check-input"
-        />
-        <label for="single-momahid" class="form-check-label">
-          لا، أنا عازب
-        </label>
-      </div>
-    </fieldset>
-  </div>
-
-  <!-- Momahid Work/Study status -->
-  <div>
-    <fieldset>
-      <legend>هل أنت تدرس أم تشتغل؟</legend>
-
-      <div class="form-check">
-        <input
-          type="radio"
-          formControlName="isMomahidStudy"
-          id="momahid-is-studying"
-          [value]="true"
-          class="form-check-input"
-        />
-        <label for="momahid-is-studying" class="form-check-label">
-          أنا أدرس
-        </label>
-      </div>
-
-      <div class="form-check">
-        <input
-          type="radio"
-          formControlName="isMomahidStudy"
-          id="momahid-is-working"
-          [value]="false"
-          class="form-check-input"
-        />
-        <label for="momahid-is-working" class="form-check-label">
-          أنا أشتغل
-        </label>
-      </div>
-    </fieldset>
-  </div>
-
-  <!-- Momahid Country of Residence -->
-  <label for="country-of-residence">ما هو البلد الذي تقيم فيه حاليا؟</label>
-  <ng-select
-    id="country-of-residence"
-    formControlName="momahidCountry"
-    [items]="arWorldCountries"
-    bindLabel=""
-    placeholder="اختر دولة إقامتك"
-    [searchable]="true"
-    class="form-select"
-    class="form-select"
-  >
-  </ng-select>
-
-  <!-- Momahid Nature/type of work or Study -->
-  <div class="form-input">
-    <label for="nature-of-work" class="form-label">
-      ما هي طبيعة دراستك\عملك ؟
-    </label>
-    <textarea
-      formControlName="momahidTypeOfWorkStudy"
-      id="nature-of-work"
-      placeholder="أدرس في الثانوية … تدرس البرمجة في الجامعة … تدرس الطب في الجامعة … تشتغل في التجارة … تشتغل سائق شاحنة"
-      class="form-control"
-    ></textarea>
-  </div>
-  <hr />
-
-  <!-- First Porn Interaction Age -->
-  <div class="form-input">
-    <label for="momahid-age-first-interaction" class="form-label">
-      كم كان عمرك عند أول اتصال بالإباحية ؟
-    </label>
-    <input
-      type="number"
-      id="momahid-age-first-interaction"
-      formControlName="momahidAgeWhenFirstInteractWithPorn"
-      class="form-control"
-    />
-  </div>
-
-  <!-- Addiction Duration -->
-  <div class="form-input">
-    <label for="addition-duration" class="form-label">
-      كم بلغت مدت إدمانك ؟
-    </label>
-    <input
-      type="number"
-      formControlName="momahidAddictionDuration"
-      id="momahid-addition-duration"
-      placeholder="هل أنت مدمن على المقاطع الاباحية لسنة أم سنتين أم سبع سنوات أم كم؟"
-      class="form-control"
-    />
-  </div>
-
-  <!-- How did Momahid find out about porn -->
-  <div class="form-input">
-    <label for="porn-discovery" class="form-label">
-      كيف عرفت الإباحية؟، هل كان الأمر صدفة أم أخبرك أحد ما، أم عرفتها بطريقة
-      أخرى
-    </label>
-    <textarea
-      formControlName="momahidPornDiscovery"
-      id="porn-discovery"
-      placeholder="مثلا: عرّفني على الإباحية زميل بالمدرسة"
-      class="form-control"
-    ></textarea>
-  </div>
-  <hr />
-
-  <!-- Major previous steps Momahid have taken to quit porn -->
-  <div class="form-input">
-    <label for="previous-failed-attempts" class="form-label">
-      هلاّ ذكرت بعض أهم محاولاتك السابقة في التخلص من ادمان الإباحية؟
-    </label>
-    <textarea
-      formControlName="previousFailedAttempts"
-      id="previous-failed-attempts"
-      rows="5"
-      class="form-control"
-    ></textarea>
-  </div>
-
-  <!-- Momahid Life description when he was addicted to porn -->
-  <div class="form-input">
-    <label for="life-during-addiction" class="form-label">
-      هل بإمكانك أن تصف حالك ووضعك عندما كنت مدمنا على الإباحية، كيف كانت حياتك
-      ؟
-    </label>
-    <textarea
-      formControlName="lifeDuringAddiction"
-      id="life-during-addiction"
-      rows="5"
-      class="form-control"
-    ></textarea>
-  </div>
-
-  <!-- withdrawal symptoms -->
-  <fieldset class="form-check">
-    <legend>
-      ما هي أبرز الأعراض الإنسحابية التي عانيت منها عندما كنت تبتعد عن الإباحية
-      في محاولاتك السابقة
-    </legend>
-    <!-- Craving -->
-    <div>
-      <input
-        type="checkbox"
-        formControlName="cravingToWatchPorn"
-        id="craving-to-watch-porn"
-        class="form-check-input"
-      />
-      <label for="craving-to-watch-porn" class="form-check-label">
-        رغبة ملحة في العودة للإباحية
+  <section aria-label="momahid profile">
+    <h2>معلومات شخصية</h2>
+    <div class="form-input">
+      <label lang="ar" for="momahid-name" class="form-label">
+        ما هو إسمك الكامل؟ (قم بكتابة إسمك الأول فقط إن لم تُرد أن تُعرف)
       </label>
-    </div>
-
-    <div>
       <input
-        type="checkbox"
-        formControlName="sexWakingDreams"
-        id="sex-waking-dreams"
-        class="form-check-input"
+        type="text"
+        id="momahid-name"
+        formControlName="momahidName"
+        class="form-control"
       />
-      <label for="sex-waking-dreams" class="form-check-label">
-        أحلام يقظة جنسية
-      </label>
     </div>
-
-    <div>
+    <!-- Momahid Age -->
+    <div class="form-input">
+      <label for="momahid-age" class="form-label">كم يبلغ عمرك؟</label>
       <input
-        type="checkbox"
-        formControlName="pornScenesCrossMind"
-        id="porn-scenes-cross-mind"
-        class="form-check-input"
+        type="number"
+        id="momahid-age"
+        formControlName="momahidAge"
+        class="form-control"
       />
-      <label for="porn-scenes-cross-mind" class="form-check-label">
-        تذكر مشاهد اباحية سبق لك مشاهدتها واستثارتك بها
-      </label>
     </div>
-
-    <br />
-
+    <!-- Momahid Marriage Status -->
     <div>
-      <input
-        type="checkbox"
-        formControlName="fastAnger"
-        id="fast-anger"
-        class="form-check-input"
-      />
-      <label for="fast-anger" class="form-check-label">غضب سريع</label>
-    </div>
-
-    <div>
-      <input
-        type="checkbox"
-        formControlName="exaggeratedSensitivity"
-        id="exaggerated-sensitivity"
-        class="form-check-input"
-      />
-      <label for="exaggerated-sensitivity" class="form-check-label">
-        حساسية مبالغ فيها تجاه أمور بسيطة وحقيرة، كلمة من أحد مثلا قد لا يقصد
-        بها أي شيئ
-      </label>
-    </div>
-
-    <br />
-
-    <div>
-      <input
-        type="checkbox"
-        formControlName="laziness"
-        id="laziness"
-        class="form-check-input"
-      />
-      <label for="laziness" class="form-check-label">كسل حادّ</label>
-    </div>
-
-    <br />
-
-    <div>
-      <input
-        type="checkbox"
-        formControlName="delirium"
-        id="delirium"
-        class="form-check-input"
-      />
-      <label for="delirium" class="form-check-label">
-        الهذيان: أفكار --بكل أنواعها-- لا تستطيع دفعها ولا تغييرها ولا التخلص
-        منها، تشغل تفكيرك، ويصبح التركير امرا غير ممكن
-      </label>
-    </div>
-
-    <!-- Give the momahid the ability to add additional withdrawal symptoms -->
-    <div formArrayName="additionalWithdrawalSymptoms">
-      @for (withdrawalSymptom of additionalWithdrawalSymptoms.controls; track
-      $index; let i = $index) {
-      <div class="wide-text-area">
-        <textarea
-          lang="ar"
-          [formControlName]="i"
-          placeholder="أكتب العَرَض الإنسحابي"
-          class="form-control"
-        ></textarea>
-        <button
-          class="removing-new-withdrawal-btn"
-          type="button"
-          (click)="removeWithdrawalSymptom(i)"
-        >
-          <img
-            src="icons/others/delete-icon.png"
-            alt="rubbish bin icon"
-            width="30px"
-            height="30px"
+      <fieldset>
+        <legend>هل أنت متزوج؟</legend>
+        <div class="form-check">
+          <input
+            type="radio"
+            formControlName="isMomahidMarried"
+            id="married-momahid"
+            [value]="true"
+            class="form-check-input"
           />
-        </button>
-      </div>
-      }
-      <div class="new-symptom-btn-container">
-        <button
-          type="button"
-          (click)="addWithdrawalSymptom()"
-          class="btn btn-outline-primary"
-        >
-          <span dir="rtl">+</span> أضف عرضا إنسحابيا آخر
-        </button>
-      </div>
+          <label for="married-momahid" class="form-check-label">
+            أجل، أنا متزوج
+          </label>
+        </div>
+        <div class="form-check">
+          <input
+            type="radio"
+            formControlName="isMomahidMarried"
+            id="single-momahid"
+            [value]="false"
+            class="form-check-input"
+          />
+          <label for="single-momahid" class="form-check-label">
+            لا، أنا عازب
+          </label>
+        </div>
+      </fieldset>
     </div>
-  </fieldset>
+    <!-- Momahid Work/Study status -->
+    <div>
+      <fieldset>
+        <legend>هل أنت تدرس أم تشتغل؟</legend>
+        <div class="form-check">
+          <input
+            type="radio"
+            formControlName="isMomahidStudy"
+            id="momahid-is-studying"
+            [value]="true"
+            class="form-check-input"
+          />
+          <label for="momahid-is-studying" class="form-check-label">
+            أنا أدرس
+          </label>
+        </div>
+        <div class="form-check">
+          <input
+            type="radio"
+            formControlName="isMomahidStudy"
+            id="momahid-is-working"
+            [value]="false"
+            class="form-check-input"
+          />
+          <label for="momahid-is-working" class="form-check-label">
+            أنا أشتغل
+          </label>
+        </div>
+      </fieldset>
+    </div>
+    <div class="momahid-residence-country">
+      <!-- Momahid Country of Residence -->
+      <label for="country-of-residence">ما هو البلد الذي تقيم فيه حاليا؟</label>
+      <ng-select
+        id="country-of-residence"
+        formControlName="momahidCountry"
+        [items]="arWorldCountries"
+        bindLabel=""
+        placeholder="اختر دولة إقامتك"
+        [searchable]="true"
+        class="form-select"
+        class="form-select"
+      >
+      </ng-select>
+    </div>
+    <!-- Momahid Nature/type of work or Study -->
+    <div class="form-input">
+      <label for="nature-of-work" class="form-label">
+        ما هي طبيعة دراستك\عملك ؟
+      </label>
+      <textarea
+        formControlName="momahidTypeOfWorkStudy"
+        id="nature-of-work"
+        placeholder="أدرس في الثانوية … تدرس البرمجة في الجامعة … تدرس الطب في الجامعة … تشتغل في التجارة … تشتغل سائق شاحنة"
+        class="form-control"
+      ></textarea>
+    </div>
+  </section>
 
-  <hr />
+  <section aria-label="momahid addiction info">
+    <h2>معلومات متعلقة بالإدمان</h2>
+    <!-- First Porn Interaction Age -->
+    <div class="form-input">
+      <label for="momahid-age-first-interaction" class="form-label">
+        كم كان عمرك عند أول اتصال بالإباحية ؟
+      </label>
+      <input
+        type="number"
+        id="momahid-age-first-interaction"
+        formControlName="momahidAgeWhenFirstInteractWithPorn"
+        class="form-control"
+      />
+    </div>
+    <!-- Addiction Duration -->
+    <div class="form-input">
+      <label for="addition-duration" class="form-label">
+        كم بلغت مدت إدمانك ؟
+      </label>
+      <input
+        type="number"
+        formControlName="momahidAddictionDuration"
+        id="momahid-addition-duration"
+        placeholder="هل أنت مدمن على المقاطع الاباحية لسنة أم سنتين أم سبع سنوات أم كم؟"
+        class="form-control"
+      />
+    </div>
+    <!-- How did Momahid find out about porn -->
+    <div class="form-input">
+      <label for="porn-discovery" class="form-label">
+        كيف عرفت الإباحية؟، هل كان الأمر صدفة أم أخبرك أحد ما، أم عرفتها بطريقة
+        أخرى
+      </label>
+      <textarea
+        formControlName="momahidPornDiscovery"
+        id="porn-discovery"
+        placeholder="مثلا: عرّفني على الإباحية زميل بالمدرسة"
+        class="form-control"
+      ></textarea>
+    </div>
+    <hr />
+    <!-- Major previous steps Momahid have taken to quit porn -->
+    <div class="form-input">
+      <label for="previous-failed-attempts" class="form-label">
+        هلاّ ذكرت بعض أهم محاولاتك السابقة في التخلص من ادمان الإباحية؟
+      </label>
+      <textarea
+        formControlName="previousFailedAttempts"
+        id="previous-failed-attempts"
+        rows="5"
+        class="form-control"
+      ></textarea>
+    </div>
+    <!-- Momahid Life description when he was addicted to porn -->
+    <div class="form-input">
+      <label for="life-during-addiction" class="form-label">
+        هل بإمكانك أن تصف حالك ووضعك عندما كنت مدمنا على الإباحية، كيف كانت
+        حياتك ؟
+      </label>
+      <textarea
+        formControlName="lifeDuringAddiction"
+        id="life-during-addiction"
+        rows="5"
+        class="form-control"
+      ></textarea>
+    </div>
+    <!-- withdrawal symptoms -->
+    <fieldset>
+      <legend>
+        ما هي أبرز الأعراض الإنسحابية التي عانيت منها عندما كنت تبتعد عن
+        الإباحية في محاولاتك السابقة
+      </legend>
+      <!-- Craving -->
+      <div class="form-check">
+        <input
+          type="checkbox"
+          formControlName="cravingToWatchPorn"
+          id="craving-to-watch-porn"
+          class="form-check-input"
+        />
+        <label for="craving-to-watch-porn" class="form-check-label">
+          رغبة ملحة في العودة للإباحية
+        </label>
+      </div>
+      <div class="form-check">
+        <input
+          type="checkbox"
+          formControlName="sexWakingDreams"
+          id="sex-waking-dreams"
+          class="form-check-input"
+        />
+        <label for="sex-waking-dreams" class="form-check-label">
+          أحلام يقظة جنسية
+        </label>
+      </div>
+      <div class="form-check">
+        <input
+          type="checkbox"
+          formControlName="pornScenesCrossMind"
+          id="porn-scenes-cross-mind"
+          class="form-check-input"
+        />
+        <label for="porn-scenes-cross-mind" class="form-check-label">
+          تذكر مشاهد اباحية سبق لك مشاهدتها واستثارتك بها
+        </label>
+      </div>
+      <br />
+      <div class="form-check">
+        <input
+          type="checkbox"
+          formControlName="fastAnger"
+          id="fast-anger"
+          class="form-check-input"
+        />
+        <label for="fast-anger" class="form-check-label">غضب سريع</label>
+      </div>
+      <div class="form-check">
+        <input
+          type="checkbox"
+          formControlName="exaggeratedSensitivity"
+          id="exaggerated-sensitivity"
+          class="form-check-input"
+        />
+        <label for="exaggerated-sensitivity" class="form-check-label">
+          حساسية مبالغ فيها تجاه أمور بسيطة وحقيرة، كلمة من أحد مثلا قد لا يقصد
+          بها أي شيئ
+        </label>
+      </div>
+      <br />
+      <div class="form-check">
+        <input
+          type="checkbox"
+          formControlName="laziness"
+          id="laziness"
+          class="form-check-input"
+        />
+        <label for="laziness" class="form-check-label">كسل حادّ</label>
+      </div>
+      <br />
+      <div class="form-check">
+        <input
+          type="checkbox"
+          formControlName="delirium"
+          id="delirium"
+          class="form-check-input"
+        />
+        <label for="delirium" class="form-check-label">
+          الهذيان: أفكار --بكل أنواعها-- لا تستطيع دفعها ولا تغييرها ولا التخلص
+          منها، تشغل تفكيرك، ويصبح التركير امرا غير ممكن
+        </label>
+      </div>
+      <!-- Give the momahid the ability to add additional withdrawal symptoms -->
+      <div formArrayName="additionalWithdrawalSymptoms">
+        @for (withdrawalSymptom of additionalWithdrawalSymptoms.controls; track
+        $index; let i = $index) {
+        <div class="wide-text-area">
+          <textarea
+            lang="ar"
+            [formControlName]="i"
+            placeholder="أكتب العَرَض الإنسحابي"
+            class="form-control"
+          ></textarea>
+          <button
+            class="removing-new-withdrawal-btn"
+            type="button"
+            (click)="removeWithdrawalSymptom(i)"
+          >
+            <img
+              src="icons/others/delete-icon.png"
+              alt="rubbish bin icon"
+              width="30px"
+              height="30px"
+            />
+          </button>
+        </div>
+        }
+        <div class="new-symptom-btn-container">
+          <button
+            type="button"
+            (click)="addWithdrawalSymptom()"
+            class="btn btn-outline-primary"
+          >
+            <span dir="rtl">+</span> أضف عرضا إنسحابيا آخر
+          </button>
+        </div>
+      </div>
+    </fieldset>
+  </section>
 
-  <!-- Momahid life description after Tawbah -->
-  <div class="form-input">
-    <label for="life-after-true-tawbah" class="form-label">
-      هلّا وصفت حالك بعد التوبة النصوح، كيف صارت حياتك ؟
-    </label>
-    <textarea
-      formControlName="lifeAfterTrueTawbah"
-      id="life-after-true-tawbah"
-      rows="5"
-      class="form-control"
-    ></textarea>
-  </div>
+  <section aria-label="Life after Tawbah">
+    <h2>التوبة: ما بعد الإدمان</h2>
+    <!-- Momahid life description after Tawbah -->
+    <div class="form-input">
+      <label for="life-after-true-tawbah" class="form-label">
+        هلّا وصفت حالك بعد التوبة النصوح، كيف صارت حياتك ؟
+      </label>
+      <textarea
+        formControlName="lifeAfterTrueTawbah"
+        id="life-after-true-tawbah"
+        rows="5"
+        class="form-control"
+      ></textarea>
+    </div>
+    <!-- What Are the major worships that helped the most in healing Momahid heart -->
+    <div class="form-input">
+      <label for="major-worships-for-heart-recovery" class="form-label">
+        ما هي أهم الطاعات والعبادات التي شعرت أنها كانت لها سببا كبيرا في تعافي
+        قلبك ؟
+      </label>
+      <textarea
+        formControlName="majorWorshipsThatHealedTheHeart"
+        id="major-worships-for-heart-recovery"
+        rows="3"
+        class="form-control"
+      ></textarea>
+    </div>
+    <!-- The major sins that was poisoning the Momahid Heart in the past -->
+    <div class="form-input">
+      <label for="previous-deadly-sins" class="form-label">
+        ما هي الذنوب التي كنت تسقط فيها كثيرا، والتي ترجح أنها كانت السبب وراء
+        تسمم قلبك فيما مضى، ولعلك لم تكن منتبها لها ؟
+      </label>
+      <textarea
+        formControlName="majorSinsThatPoisonedTheHeart"
+        id="major-sins-that-poisoned-the-heart"
+        rows="3"
+        class="form-control"
+      >
+      </textarea>
+    </div>
+  </section>
 
-  <!-- What Are the major worships that helped the most in healing Momahid heart -->
-  <div class="form-input">
-    <label for="major-worships-for-heart-recovery" class="form-label">
-      ما هي أهم الطاعات والعبادات التي شعرت أنها كانت لها سببا كبيرا في تعافي
-      قلبك ؟
-    </label>
-    <textarea
-      formControlName="majorWorshipsThatHealedTheHeart"
-      id="major-worships-for-heart-recovery"
-      rows="3"
-      class="form-control"
-    ></textarea>
-  </div>
-
-  <!-- The major sins that was poisoning the Momahid Heart in the past -->
-  <div class="form-input">
-    <label for="previous-deadly-sins" class="form-label">
-      ما هي الذنوب التي كنت تسقط فيها كثيرا، والتي ترجح أنها كانت السبب وراء
-      تسمم قلبك فيما مضى، ولعلك لم تكن منتبها لها ؟
-    </label>
-    <textarea
-      formControlName="majorSinsThatPoisonedTheHeart"
-      id="major-sins-that-poisoned-the-heart"
-      rows="3"
-      class="form-control"
-    >
-    </textarea>
-  </div>
-
-  <!-- Momahid message to his Muslims Brothers -->
-  <div class="form-input">
-    <label for="message-for-momahid-brothers" class="form-label">
-      هل هناك أمر آخر ترغب في إضافته؟؛ ملاحظة، نصيحة .. أو أي شيئ قد يكون مفيدا
-      للشباب أن يطّلعوا عليه
-    </label>
-    <textarea
-      formControlName="messageForMomahidBrother"
-      id="message-for-momahid-brothers"
-      rows="5"
-      class="form-control"
-    ></textarea>
-  </div>
-
+  <section aria-label="message to momahid's brothers">
+    <h2>أمر أخير: رسالة أو نصيحة</h2>
+    <!-- Momahid message to his Muslims Brothers -->
+    <div class="form-input">
+      <label for="message-for-momahid-brothers" class="form-label">
+        هل هناك أمر آخر ترغب في إضافته؟؛ ملاحظة، نصيحة .. أو أي شيئ قد يكون
+        مفيدا للشباب أن يطّلعوا عليه
+      </label>
+      <textarea
+        formControlName="messageForMomahidBrother"
+        id="message-for-momahid-brothers"
+        rows="5"
+        class="form-control"
+      ></textarea>
+    </div>
+  </section>
   <!-- Submit Button -->
   <div class="submit-btn-container">
     <button

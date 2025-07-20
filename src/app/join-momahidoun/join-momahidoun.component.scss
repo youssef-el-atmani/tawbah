@@ -4,5 +4,20 @@
 .submit-btn-container {
   display: flex;
   justify-content: center;
-  padding: 17px 7px 0;
+}
+
+section {
+  margin-bottom: 50px;
+}
+
+h2 {
+  font-weight: bold;
+}
+
+// Add space between form-tiny-sections
+// Tiny-sections are : label-input group, or fieldset
+.momahid-residence-country,
+fieldset,
+.form-input {
+  margin-bottom: 21px;
 }
