@@ -32,3 +32,18 @@ fieldset,
     background-color: #fff;
   }
 }
+
+// let us see
+.momahid-residence-country label {
+  margin-bottom: 7px;
+}
+
+::ng-deep .ng-select .ng-dropdown-panel {
+  background-color: #fff;
+  border: 2px solid #ced4da;
+  padding: 11px;
+  position: absolute;
+  inset-inline-start: 0;
+  inset-block-start: 37px;
+  // box-shadow: 0 0 8px 0px #000000;
+}
