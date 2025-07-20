@@ -21,3 +21,14 @@ fieldset,
 .form-input {
   margin-bottom: 21px;
 }
+
+.wide-text-area {
+  display: flex;
+  gap: 2px;
+  // align-items: center;
+
+  button {
+    border-radius: 3px;
+    background-color: #fff;
+  }
+}
