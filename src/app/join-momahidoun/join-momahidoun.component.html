@@ -53,6 +53,23 @@
         </div>
       </fieldset>
     </div>
+
+    <div class="momahid-residence-country">
+      <!-- Momahid Country of Residence -->
+      <label for="country-of-residence">ما هو البلد الذي تقيم فيه حاليا؟</label>
+      <ng-select
+        id="country-of-residence"
+        formControlName="momahidCountry"
+        [items]="arWorldCountries"
+        bindLabel=""
+        placeholder="اختر دولة إقامتك"
+        [searchable]="true"
+        class="form-select"
+        class="form-select"
+      >
+      </ng-select>
+    </div>
+
     <!-- Momahid Work/Study status -->
     <div>
       <fieldset>
@@ -83,21 +100,7 @@
         </div>
       </fieldset>
     </div>
-    <div class="momahid-residence-country">
-      <!-- Momahid Country of Residence -->
-      <label for="country-of-residence">ما هو البلد الذي تقيم فيه حاليا؟</label>
-      <ng-select
-        id="country-of-residence"
-        formControlName="momahidCountry"
-        [items]="arWorldCountries"
-        bindLabel=""
-        placeholder="اختر دولة إقامتك"
-        [searchable]="true"
-        class="form-select"
-        class="form-select"
-      >
-      </ng-select>
-    </div>
+
     <!-- Momahid Nature/type of work or Study -->
     <div class="form-input">
       <label for="nature-of-work" class="form-label">
