@@ -28,7 +28,7 @@
     <fieldset class="form-check-reverse">
       <legend>هل أنت متزوج؟</legend>
 
-      <div class="form-check ">
+      <div class="form-check">
         <input
           type="radio"
           formControlName="isMomahidMarried"
@@ -41,7 +41,7 @@
         </label>
       </div>
 
-      <div class="form-check ">
+      <div class="form-check">
         <input
           type="radio"
           formControlName="isMomahidMarried"
@@ -306,8 +306,12 @@
         </button>
       </div>
       }
-      <div>
-        <button type="button" (click)="addWithdrawalSymptom()">
+      <div class="new-symptom-btn-container">
+        <button
+          type="button"
+          (click)="addWithdrawalSymptom()"
+          class="btn btn-outline-primary"
+        >
           <span dir="rtl">+</span> أضف عرضا إنسحابيا آخر
         </button>
       </div>
@@ -373,8 +377,12 @@
   </div>
 
   <!-- Submit Button -->
-  <div>
-    <button type="submit" (click)="submitMomahidRequest()">
+  <div class="submit-btn-container">
+    <button
+      type="submit"
+      (click)="submitMomahidRequest()"
+      class="btn btn-primary"
+    >
       أرسل طلب الإنضمام للممهّدين
     </button>
   </div>

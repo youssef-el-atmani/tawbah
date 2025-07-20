@@ -1,31 +1,8 @@
-.form-input {
+.new-symptom-btn-container {
+  margin-top: 7px;
+}
+.submit-btn-container {
   display: flex;
-  flex-direction: column;
-  margin-top: 21px;
-}
-::ng-deep ng-select {
-  width: 100%;
-}
-::ng-deep ng-select .ng-dropdown-panel {
-  background-color: white;
-  z-index: 1050;
-  border: 1px solid #ced4da;
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
-}
-
-.wide-text-area {
-  display: flex;
-
-  textarea {
-    flex: 1;
-  }
-}
-
-.removing-new-withdrawal-btn {
-  cursor: pointer;
-  padding: 3px;
-  background-color: #facdcd;
-  margin: 1px 2px;
-  border: 2px solid rgb(80, 79, 79);
-  border-radius: 5px;
+  justify-content: center;
+  padding: 17px 7px 0;
 }
