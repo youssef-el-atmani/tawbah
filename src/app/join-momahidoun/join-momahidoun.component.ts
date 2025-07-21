@@ -4,7 +4,7 @@ import {
   NgSelectComponent,
 } from '@ng-select/ng-select';
 import { HttpClient } from '@angular/common/http';
-import { Component, inject, OnInit } from '@angular/core';
+import { Component, inject, OnInit, signal } from '@angular/core';
 
 import {
   FormControl,

@@ -486,14 +486,66 @@
       ></textarea>
     </div>
   </section>
+
   <!-- Submit Button -->
+  <!-- Button trigger modal -->
   <div class="submit-btn-container">
     <button
-      type="submit"
-      (click)="submitMomahidRequest()"
+      type="button"
       class="btn btn-primary"
+      data-bs-toggle="modal"
+      data-bs-target="#staticBackdrop"
     >
       أرسل طلب الإنضمام للممهّدين
     </button>
+  </div>
+
+  <!-- Modal: PopUp for approaving the form-submition -->
+  <div
+    class="modal fade"
+    id="staticBackdrop"
+    data-bs-backdrop="static"
+    data-bs-keyboard="false"
+    tabindex="-1"
+    aria-labelledby="staticBackdropLabel"
+    aria-hidden="true"
+  >
+    <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h1 class="modal-title fs-5" id="staticBackdropLabel">
+            تأكيد الإرسال
+          </h1>
+          <button
+            type="button"
+            class="btn-close"
+            data-bs-dismiss="modal"
+            aria-label="Close"
+          ></button>
+        </div>
+        <div class="modal-body">
+          <div class="alert alert-warning" role="alert">
+            أحسن اللّه إليك، قبل أن تُأكد الإرسال، أخلص عملك هذا للّه، واحتسب
+            أجره عند اللّه
+          </div>
+        </div>
+        <div class="modal-footer">
+          <button
+            type="button"
+            class="btn btn-secondary"
+            data-bs-dismiss="modal"
+          >
+            رجوع
+          </button>
+          <button
+            type="button"
+            class="btn btn-primary"
+            (click)="submitMomahidRequest()"
+          >
+            تأكيد الإرسال
+          </button>
+        </div>
+      </div>
+    </div>
   </div>
 </form>
