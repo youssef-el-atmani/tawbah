@@ -22,14 +22,25 @@ fieldset,
   margin-bottom: 21px;
 }
 
+[formArrayName="additionalWithdrawalSymptoms"] {
+  margin-top: 11px;
+}
 .wide-text-area {
   display: flex;
   gap: 2px;
   // align-items: center;
+  margin-bottom: 5px;
+  border: none;
 
   button {
     border-radius: 3px;
     background-color: #fff;
+    &:hover {
+      background-color: #fff0f3;
+    }
+    &:active {
+      background-color: #ffccd5;
+    }
   }
 }
 
