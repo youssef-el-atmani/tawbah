@@ -528,6 +528,12 @@
             أحسن اللّه إليك، قبل أن تُأكد الإرسال، أخلص عملك هذا للّه، واحتسب
             أجره عند اللّه
           </div>
+
+          @if(momahidForm.invalid && submitAttempted()){
+          <div class="alert alert-danger" role="alert">
+            من فضلك، قم بملإ الخانات الضرورية قبل تأكيد الإرسال
+          </div>
+          }
         </div>
         <div class="modal-footer">
           <button

@@ -395,10 +395,14 @@ export class JoinMomahidounComponent implements OnInit {
   // #########################################
   constructor(private http: HttpClient) {}
 
+  submitAttempted = signal(false);
+
   submitMomahidRequest() {
+    this.submitAttempted.set(true);
+
     if (this.momahidForm.invalid) {
       this.momahidForm.markAllAsTouched(); // show validation errors
-      alert('الرجاء ملء الحقول المطلوبة');
+      // alert('الرجاء ملء الحقول المطلوبة');
       return;
     }
 
