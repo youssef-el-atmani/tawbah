@@ -11,18 +11,34 @@
         id="momahid-name"
         formControlName="momahidName"
         class="form-control"
+        [class.is-invalid]="momahidName?.invalid && momahidName?.touched"
+        [class.is-valid]="!momahidName?.invalid && momahidName?.touched"
       />
+
+      @if (momahidName?.touched && momahidName?.invalid) {
+      <div class="text-danger">المرجو إدخال الإسم</div>
+      }
     </div>
     <!-- Momahid Age -->
     <div class="form-input">
       <label for="momahid-age" class="form-label">كم يبلغ عمرك؟</label>
       <input
         type="number"
+        min="10"
         id="momahid-age"
         formControlName="momahidAge"
         class="form-control"
+        [class.is-invalid]="momahidAge?.invalid && momahidAge?.touched"
+        [class.is-valid]="!momahidAge?.invalid && momahidAge?.touched"
       />
+
+      @if (momahidAge?.touched && momahidAge?.invalid) {
+      <div class="text-danger">
+        المرجو إدخال العمر على شكل عدد صحيح، مثلا: "15"، أو "32" أو "50"
+      </div>
+      }
     </div>
+
     <!-- Momahid Marriage Status -->
     <div>
       <fieldset>
@@ -125,7 +141,23 @@
         id="momahid-age-first-interaction"
         formControlName="momahidAgeWhenFirstInteractWithPorn"
         class="form-control"
+        [class.is-invalid]="
+          momahidAgeWhenFirstInteractWithPorn?.invalid &&
+          momahidAgeWhenFirstInteractWithPorn?.touched
+        "
+        [class.is-valid]="
+          !momahidAgeWhenFirstInteractWithPorn?.invalid &&
+          momahidAgeWhenFirstInteractWithPorn?.touched
+        "
       />
+
+      @if (momahidAgeWhenFirstInteractWithPorn?.touched &&
+      momahidAgeWhenFirstInteractWithPorn?.invalid) {
+      <div class="text-danger">
+        المرجو إدخال عمرك عندما رأيت الإباحية للمرة الأولى على شكل عدد صحيح،
+        مثلا: "11"، أو "17" أو "20"
+      </div>
+      }
     </div>
     <!-- Addiction Duration -->
     <div class="form-input">
@@ -138,7 +170,21 @@
         formControlName="momahidAddictionDuration"
         id="momahid-addition-duration"
         class="form-control"
+        [class.is-invalid]="
+          momahidAddictionDuration?.invalid && momahidAddictionDuration?.touched
+        "
+        [class.is-valid]="
+          !momahidAddictionDuration?.invalid &&
+          momahidAddictionDuration?.touched
+        "
       />
+
+      @if (momahidAddictionDuration?.touched &&
+      momahidAddictionDuration?.invalid) {
+      <div class="text-danger">
+        المرجو إدخال مدة الإدمان على شكل عدد صحيح، مثلا: "1"، أو "2" أو "7"
+      </div>
+      }
     </div>
     <!-- How did Momahid find out about porn -->
     <div class="form-input">
@@ -151,7 +197,17 @@
         id="porn-discovery"
         placeholder="مثلا: عرّفني على الإباحية زميل بالمدرسة"
         class="form-control"
+        [class.is-invalid]="
+          momahidPornDiscovery?.invalid && momahidPornDiscovery?.touched
+        "
+        [class.is-valid]="
+          !momahidPornDiscovery?.invalid && momahidPornDiscovery?.touched
+        "
       ></textarea>
+
+      @if (momahidPornDiscovery?.invalid && momahidPornDiscovery?.touched) {
+      <div class="text-danger">من فضلك؛ قم بإدخال كيف عرفت الإباحية</div>
+      }
     </div>
     <hr />
     <!-- Major previous steps Momahid have taken to quit porn -->
@@ -164,7 +220,18 @@
         id="previous-failed-attempts"
         rows="5"
         class="form-control"
+        [class.is-invalid]="
+          previousFailedAttempts?.invalid && previousFailedAttempts?.touched
+        "
+        [class.is-valid]="
+          !previousFailedAttempts?.invalid && previousFailedAttempts?.touched
+        "
       ></textarea>
+
+      @if ( previousFailedAttempts?.invalid && previousFailedAttempts?.touched )
+      {
+      <div class="text-danger">من فضلك؛ قم بملإ هذه الخانة</div>
+      }
     </div>
     <!-- Momahid Life description when he was addicted to porn -->
     <div class="form-input">
@@ -177,7 +244,20 @@
         id="life-during-addiction"
         rows="5"
         class="form-control"
+        [class.is-invalid]="
+          lifeDuringAddiction?.invalid && lifeDuringAddiction?.touched
+        "
+        [class.is-valid]="
+          !lifeDuringAddiction?.invalid && lifeDuringAddiction?.touched
+        "
       ></textarea>
+
+      @if ( lifeDuringAddiction?.invalid && lifeDuringAddiction?.touched ) {
+      <div class="text-danger">من فضلك؛ قم بملإ هذه الخانة</div>
+      } @else if (!lifeDuringAddiction?.invalid && lifeDuringAddiction?.touched)
+      {
+      <div class="text-success">أحسن اللّه إليك على ملإ هذه الخانة</div>
+      }
     </div>
     <!-- withdrawal symptoms -->
     <fieldset>
@@ -328,8 +408,22 @@
         id="life-after-true-tawbah"
         rows="5"
         class="form-control"
+        [class.is-invalid]="
+          lifeAfterTrueTawbah?.invalid && lifeAfterTrueTawbah?.touched
+        "
+        [class.is-valid]="
+          !lifeAfterTrueTawbah?.invalid && lifeAfterTrueTawbah?.touched
+        "
       ></textarea>
+
+      @if ( lifeAfterTrueTawbah?.invalid && lifeAfterTrueTawbah?.touched ) {
+      <div class="text-danger">من فضلك؛ قم بملإ هذه الخانة</div>
+      } @else if ( !lifeAfterTrueTawbah?.invalid && lifeAfterTrueTawbah?.touched
+      ) {
+      <div class="text-success">أحسن اللّه إليك على ملإ هذه الخانة</div>
+      }
     </div>
+
     <!-- What Are the major worships that helped the most in healing Momahid heart -->
     <div class="form-input">
       <label for="major-worships-for-heart-recovery" class="form-label">
@@ -341,7 +435,23 @@
         id="major-worships-for-heart-recovery"
         rows="3"
         class="form-control"
+        [class.is-invalid]="
+          majorWorshipsThatHealedTheHeart?.invalid &&
+          majorWorshipsThatHealedTheHeart?.touched
+        "
+        [class.is-valid]="
+          !majorWorshipsThatHealedTheHeart?.invalid &&
+          majorWorshipsThatHealedTheHeart?.touched
+        "
       ></textarea>
+
+      @if ( majorWorshipsThatHealedTheHeart?.invalid &&
+      majorWorshipsThatHealedTheHeart?.touched ) {
+      <div class="text-danger">من فضلك؛ قم بملإ هذه الخانة</div>
+      } @else if ( ! majorWorshipsThatHealedTheHeart?.invalid &&
+      majorWorshipsThatHealedTheHeart?.touched ) {
+      <div class="text-success">أحسن اللّه إليك على ملإ هذه الخانة</div>
+      }
     </div>
     <!-- The major sins that was poisoning the Momahid Heart in the past -->
     <div class="form-input">

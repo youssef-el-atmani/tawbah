@@ -32,21 +32,30 @@ export class JoinMomahidounComponent implements OnInit {
   numberOfExistingMomahidoun = 0;
 
   momahidForm: FormGroup = new FormGroup({
-    momahidName: new FormControl(),
-    momahidAge: new FormControl(),
+    momahidName: new FormControl('', Validators.required),
+    momahidAge: new FormControl('', [
+      Validators.required,
+      Validators.pattern(/^\d+$/),
+    ]),
     isMomahidMarried: new FormControl(),
     isMomahidStudy: new FormControl(),
     momahidCountry: new FormControl(),
     momahidTypeOfWorkStudy: new FormControl(),
 
     // ----
-    momahidAgeWhenFirstInteractWithPorn: new FormControl(),
-    momahidAddictionDuration: new FormControl(),
-    momahidPornDiscovery: new FormControl(),
+    momahidAgeWhenFirstInteractWithPorn: new FormControl('', [
+      Validators.required,
+      Validators.pattern(/^\d+$/),
+    ]),
+    momahidAddictionDuration: new FormControl('', [
+      Validators.required,
+      Validators.pattern(/^\d+$/),
+    ]),
+    momahidPornDiscovery: new FormControl('', Validators.required),
 
     // ----
-    previousFailedAttempts: new FormControl(),
-    lifeDuringAddiction: new FormControl(),
+    previousFailedAttempts: new FormControl('', Validators.required),
+    lifeDuringAddiction: new FormControl('', Validators.required),
     // withdrawal symptoms
     cravingToWatchPorn: new FormControl(false),
     sexWakingDreams: new FormControl(false),
@@ -64,8 +73,8 @@ export class JoinMomahidounComponent implements OnInit {
     additionalWithdrawalSymptoms: this.formBuilder.array([]),
 
     // ----
-    lifeAfterTrueTawbah: new FormControl(),
-    majorWorshipsThatHealedTheHeart: new FormControl(),
+    lifeAfterTrueTawbah: new FormControl('', Validators.required),
+    majorWorshipsThatHealedTheHeart: new FormControl('', Validators.required),
     majorSinsThatPoisonedTheHeart: new FormControl(),
     messageForMomahidBrother: new FormControl(),
   });
@@ -336,12 +345,63 @@ export class JoinMomahidounComponent implements OnInit {
     this.additionalWithdrawalSymptoms.removeAt(index);
   }
 
+  // These getters used for the validations
+  get momahidName() {
+    return this.momahidForm.get('momahidName');
+  }
+
+  get momahidAge() {
+    return this.momahidForm.get('momahidAge');
+  }
+
+  get momahidAgeWhenFirstInteractWithPorn() {
+    return this.momahidForm.get('momahidAgeWhenFirstInteractWithPorn');
+  }
+
+  get momahidAddictionDuration() {
+    return this.momahidForm.get('momahidAddictionDuration');
+  }
+
+  get momahidPornDiscovery() {
+    return this.momahidForm.get('momahidPornDiscovery');
+  }
+
+  get previousFailedAttempts() {
+    return this.momahidForm.get('previousFailedAttempts');
+  }
+
+  get lifeDuringAddiction() {
+    return this.momahidForm.get('lifeDuringAddiction');
+  }
+
+  get lifeAfterTrueTawbah() {
+    return this.momahidForm.get('lifeAfterTrueTawbah');
+  }
+
+  get majorWorshipsThatHealedTheHeart() {
+    return this.momahidForm.get('majorWorshipsThatHealedTheHeart');
+  }
+
+  get majorSinsThatPoisonedTheHeart() {
+    return this.momahidForm.get('majorSinsThatPoisonedTheHeart');
+  }
+
+  get messageForMomahidBrother() {
+    return this.momahidForm.get('messageForMomahidBrother');
+  }
+
   // #########################################
   // Submitting The Form
   // #########################################
   constructor(private http: HttpClient) {}
 
   submitMomahidRequest() {
+    if (this.momahidForm.invalid) {
+      this.momahidForm.markAllAsTouched(); // show validation errors
+      alert('الرجاء ملء الحقول المطلوبة');
+      return;
+    }
+
     const storyMacroInfo = {
       // Because Ids starting from 0,
       // always the new-id will be equal to the number of existing momahidoun
