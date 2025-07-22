@@ -420,7 +420,7 @@ export class JoinMomahidounComponent implements OnInit {
 
     this.http
       .post('http://localhost:3000/al-momahidoun', newMomahidData)
-      .subscribe((res: any) => alert('The requested saved successfully!'));
+      .subscribe((res: any) => alert('تم استقبال طلبك بنجاح'));
   }
 
   ngOnInit(): void {
