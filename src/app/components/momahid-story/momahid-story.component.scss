@@ -1,0 +1,23 @@
+.momahid-story {
+  .profile {
+    display: flex;
+    align-items: center;
+    gap: 17px;
+
+    img {
+      border-radius: 100%;
+    }
+
+    .name {
+      font-weight: bold;
+      font-size: 1.4rem;
+      color: #212529;
+    }
+
+    .other-info {
+      display: flex;
+      gap: 7px;
+      color: #495057;
+    }
+  }
+}
