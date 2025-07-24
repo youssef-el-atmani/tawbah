@@ -1,4 +1,5 @@
 <section aria-label="momahidoun and their stories">
-  <app-momahidoun-box></app-momahidoun-box>
-  <app-story-box></app-story-box>
+  @for (momahidStory of momahidounStories; track momahidStory.id) {
+  <app-momahid-story [momahidStoryInfo]="momahidStory"></app-momahid-story>
+  }
 </section>
