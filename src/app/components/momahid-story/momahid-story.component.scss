@@ -1,62 +1,89 @@
 .momahid-story {
   border: 2px solid #dee2e6; //for debugging
-  width: 500px;
-  border-radius: 17px;
-  padding: 11px;
+  width: 600px;
+  border-radius: 11px;
 
-  .profile {
-    display: flex;
-    align-items: center;
-    gap: 27px;
-
-    img {
-      border-radius: 100%;
-    }
-
-    .name {
-      font-weight: bold;
-      font-size: 1.4rem;
-      color: #212529;
-    }
-
-    .other-info {
-      display: flex;
-      gap: 7px;
-      color: #495057;
-    }
+  &:hover {
+    background-color: #f8f9fa;
   }
 
-  .addiction-duration {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    background-color: #ffed66;
-    margin: 21px 0;
-    border-radius: 7px;
-    padding: 11px 0 15px;
+  .story-content {
+    // height: 560px;
+    // overflow: hidden;
+    padding: 11px;
 
-    p.duration {
+    .profile {
       display: flex;
-      // justify-content: center;
       align-items: center;
-      font-size: 1.4rem;
-      font-weight: bold;
-      margin: 0;
-    }
+      gap: 27px;
 
-    p.starting-age {
-      color: #495057;
-      margin: 0;
-    }
-  }
+      img {
+        border-radius: 100%;
+      }
 
-  .momahid-record {
-    > section {
-      margin-bottom: 37px;
-      h2 {
+      .name {
         font-weight: bold;
+        font-size: 1.4rem;
+        color: #212529;
+      }
+
+      .other-info {
+        display: flex;
+        gap: 7px;
+        color: #495057;
       }
     }
+
+    .addiction-duration {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      background-color: #ffed66;
+      margin: 21px 0;
+      border-radius: 7px;
+      padding: 11px 0 15px;
+
+      p.duration {
+        display: flex;
+        // justify-content: center;
+        align-items: center;
+        font-size: 1.4rem;
+        font-weight: bold;
+        margin: 0;
+      }
+
+      p.starting-age {
+        color: #495057;
+        margin: 0;
+      }
+    }
+
+    .momahid-record {
+      > section {
+        margin-bottom: 37px;
+        h2 {
+          font-weight: bold;
+        }
+      }
+    }
+
+    &:hover {
+      cursor: pointer;
+    }
+
+    &:active {
+      background-color: #e9ecef;
+    }
   }
+
+  .btn-container {
+    border-top: 2px solid #dee2e6;
+    padding: 7px 11px;
+  }
+}
+
+.shrink-story {
+  height: 560px;
+  overflow: hidden;
 }
