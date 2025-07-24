@@ -8,7 +8,7 @@ export interface Momahid {
   pageLanguage: PageLanguage;
 
   isStoryApproved: boolean;
-  
+
   isStoryVerified: boolean;
 
   // -------
@@ -47,6 +47,7 @@ export interface Momahid {
   exaggeratedSensitivity: boolean;
 
   laziness: boolean;
+  overeating: boolean;
 
   delirium: boolean;
 
