@@ -1,4 +1,4 @@
-<div class="momahid-story">
+<div class="momahid-story" #momahidStoryContainer>
   <div class="story-content" (click)="expandStory()" #storyContent>
     <div class="profile">
       <div class="picture">
@@ -112,7 +112,7 @@
     </div>
   </div>
 
-  <div class="btn-container">
+  <div class="btn-container" #expandingBtnContainer>
     <button
       type="button"
       class="btn btn-outline-primary"
