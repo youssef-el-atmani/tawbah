@@ -10,22 +10,28 @@
         />
       </div>
       <div class="info">
-        <div class="name">يوسف العثماني</div>
+        <div class="name">{{ momahidStoryInfo()?.momahidName }}</div>
         <div class="other-info">
-          <div class="age">25 عام</div>
+          <div class="age">{{ momahidStoryInfo()?.momahidAge }} عام</div>
           <div class="dot">.</div>
-          <div class="marriage-status">عازب</div>
+          <div class="marriage-status">{{ momahidMarriageStatus() }}</div>
           <div class="dot">.</div>
-          <div class="country">المغرب</div>
+          <div class="country">{{ momahidStoryInfo()?.momahidCountry }}</div>
           <div class="dot">.</div>
-          <div class="work-or-study">أدرس</div>
+          <div class="work-or-study">{{ momahidStudyOrWork() }}</div>
         </div>
       </div>
     </div>
     <div class="addiction-duration">
-      <p class="duration">9 سـنـوات من الإدمــان</p>
+      <p class="duration">
+        {{ momahidStoryInfo()?.momahidAddictionDuration }} سـنـوات من الإدمــان
+      </p>
       <p class="starting-age">
-        منذ أن كان عمري <span class="age-value">15</span> عام
+        منذ أن كان عمري
+        <span class="age-value">{{
+          momahidStoryInfo()?.momahidAgeWhenFirstInteractWithPorn
+        }}</span>
+        عام
       </p>
     </div>
     <div class="momahid-record">
@@ -34,31 +40,45 @@
         <section aria-label="previous failed attempts">
           <h3>المحاولات الفاشلة السابقة</h3>
           <p>
-            هذا النص هو مجرد مثال لاستخدامه في تصاميم الصفحات أو نماذج العرض،
-            حيث يُستخدم لملء المساحة بالنص العربي دون الاعتماد على محتوى فعلي.
-            يمكن تعديل هذا النص لاحقًا بما يتناسب مع الغرض الحقيقي من الصفحة أو
-            التطبيق، ويُساعد في تصور الشكل النهائي قبل إدخال المحتوى الأصلي.
+            {{ momahidStoryInfo()?.previousFailedAttempts }}
           </p>
         </section>
         <section aria-label="life description during addiction">
           <h3>كيف كان حالي عندما كنت مدمنا</h3>
           <p>
-            هذا النص هو مجرد مثال لاستخدامه في تصاميم الصفحات أو نماذج العرض،
-            حيث يُستخدم لملء المساحة بالنص العربي دون الاعتماد على محتوى فعلي.
-            يمكن تعديل هذا النص لاحقًا بما يتناسب مع الغرض الحقيقي من الصفحة أو
-            التطبيق، ويُساعد في تصور الشكل النهائي قبل إدخال المحتوى الأصلي.
+            {{ momahidStoryInfo()?.lifeDuringAddiction }}
           </p>
         </section>
         <section aria-label="الأعراض الإنسحابية">
           <h3>الأعراض الإنسحابية</h3>
           <ul>
-            <li>تعب</li>
-            <li>عياء</li>
-            <li>افكار سيئة</li>
-            <li>إفراط في النوم</li>
-            <li>إفراط في الأكل</li>
+            @if (momahidStoryInfo()?.cravingToWatchPorn) {
+            <li>رغبة ملحة في العودة للإباحية</li>
+            } @if (momahidStoryInfo()?.sexWakingDreams) {
+            <li>أحلام يقظة جنسية</li>
+            } @if (momahidStoryInfo()?.pornScenesCrossMind) {
+            <li>تذكر مشاهد اباحية سبق لك مشاهدتها واستثارتك بها</li>
+            } @if(momahidStoryInfo()?.fastAnger){
             <li>غضب سريع</li>
-            <li>أمور أخرى</li>
+            } @if(momahidStoryInfo()?.exaggeratedSensitivity){
+            <li>
+              حساسية مبالغ فيها تجاه أمور بسيطة وحقيرة، كلمة من أحد مثلا قد لا
+              يقصد بها أي شيئ
+            </li>
+            } @if (momahidStoryInfo()?.laziness) {
+            <li>كسل حادّ</li>
+            }@if (momahidStoryInfo()?.overeating) {
+            <li>شراهة كبيرة للطعام، وعدم القدرة على التوقف عن الأكل</li>
+            } @if (momahidStoryInfo()?.delirium) {
+            <li>
+              الهذيان: أفكار --بكل أنواعها-- لا أستطيع دفعها ولا تغييرها ولا
+              التخلص منها، تشغل تفكيري، ويصبح التركيز امرا غير ممكن
+            </li>
+            } @for (symptom of momahidStoryInfo()?.additionalWithdrawalSymptoms;
+            track $index) { @if (symptom !== '') {
+            <li>{{ symptom }}</li>
+
+            } }
           </ul>
         </section>
       </section>
@@ -66,47 +86,32 @@
         <h2>التوبة: مرحلة ما بعد الإدمان</h2>
         <h3>كيف أصبح حالي بعد التوبة</h3>
         <p>
-          هذا النص هو مجرد مثال لاستخدامه في تصاميم الصفحات أو نماذج العرض، حيث
-          يُستخدم لملء المساحة بالنص العربي دون الاعتماد على محتوى فعلي. يمكن
-          تعديل هذا النص لاحقًا بما يتناسب مع الغرض الحقيقي من الصفحة أو
-          التطبيق، ويُساعد في تصور الشكل النهائي قبل إدخال المحتوى الأصلي.
+          {{ momahidStoryInfo()?.lifeAfterTrueTawbah }}
         </p>
         <h3>عبادات وطاعات ساعدت على تعافي قلبي</h3>
         <p>
-          هذا النص هو مجرد مثال لاستخدامه في تصاميم الصفحات أو نماذج العرض، حيث
-          يُستخدم لملء المساحة بالنص العربي دون الاعتماد على محتوى فعلي. يمكن
-          تعديل هذا النص لاحقًا بما يتناسب مع الغرض الحقيقي من الصفحة أو
-          التطبيق، ويُساعد في تصور الشكل النهائي قبل إدخال المحتوى الأصلي.
+          {{ momahidStoryInfo()?.majorWorshipsThatHealedTheHeart }}
         </p>
         <h3>أسوأ الذنوب التي كان لها ضرر كبير على قلبي سابقا</h3>
         <p>
-          هذا النص هو مجرد مثال لاستخدامه في تصاميم الصفحات أو نماذج العرض، حيث
-          يُستخدم لملء المساحة بالنص العربي دون الاعتماد على محتوى فعلي. يمكن
-          تعديل هذا النص لاحقًا بما يتناسب مع الغرض الحقيقي من الصفحة أو
-          التطبيق، ويُساعد في تصور الشكل النهائي قبل إدخال المحتوى الأصلي.
+          {{ momahidStoryInfo()?.majorSinsThatPoisonedTheHeart }}
         </p>
       </section>
       <section aria-label="رسالة للشباب المدمنين">
         <h2>رسالة للشباب المدمنين</h2>
         <p>
-          هذا النص هو مجرد مثال لاستخدامه في تصاميم الصفحات أو نماذج العرض، حيث
-          يُستخدم لملء المساحة بالنص العربي دون الاعتماد على محتوى فعلي. يمكن
-          تعديل هذا النص لاحقًا بما يتناسب مع الغرض الحقيقي من الصفحة أو
-          التطبيق، ويُساعد في تصور الشكل النهائي قبل إدخال المحتوى الأصلي.
+          {{ momahidStoryInfo()?.messageForMomahidBrother }}
         </p>
       </section>
       <section aria-label="أمور إضافية">
         <h2>معلومات جانبية</h2>
         <h3>كيف عرفت الإباحية</h3>
         <p>
-          هذا النص هو مجرد مثال لاستخدامه في تصاميم الصفحات أو نماذج العرض، حيث
+          {{ momahidStoryInfo()?.momahidPornDiscovery }}
         </p>
         <h3>طبيعة عملي\دراستي</h3>
         <p>
-          هذا النص هو مجرد مثال لاستخدامه في تصاميم الصفحات أو نماذج العرض، حيث
-          يُستخدم لملء المساحة بالنص العربي دون الاعتماد على محتوى فعلي. يمكن
-          تعديل هذا النص لاحقًا بما يتناسب مع الغرض الحقيقي من الصفحة أو
-          التطبيق، ويُساعد في تصور الشكل النهائي قبل إدخال المحتوى الأصلي.
+          {{ momahidStoryInfo()?.momahidTypeOfWorkStudy }}
         </p>
       </section>
     </div>

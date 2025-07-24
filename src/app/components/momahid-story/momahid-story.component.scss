@@ -1,6 +1,6 @@
 .momahid-story {
   border: 2px solid #dee2e6; //for debugging
-  width: 600px;
+  // width: 600px;
   border-radius: 11px;
 
   &:hover {
@@ -39,7 +39,8 @@
       flex-direction: column;
       justify-content: center;
       align-items: center;
-      background-color: #ffed66;
+      background-color: #ffb700;
+      color: #000;
       margin: 21px 0;
       border-radius: 7px;
       padding: 11px 0 15px;
@@ -60,10 +61,30 @@
     }
 
     .momahid-record {
+      margin-right: 2px;
       > section {
         margin-bottom: 37px;
         h2 {
           font-weight: bold;
+          font-size: 1.5rem;
+          color: #212529;
+        }
+        h3 {
+          font-weight: bold;
+          font-size: 1.2rem;
+          color: #495057;
+          margin-right: 17px;
+          margin-bottom: 3px;
+        }
+        p {
+          margin-right: 17px;
+          margin-top: 0;
+          color: #343a40;
+        }
+        ul {
+          color: #343a40;
+
+          list-style: circle;
         }
       }
     }

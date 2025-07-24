@@ -1,10 +1,13 @@
 import {
   Component,
+  computed,
   ElementRef,
+  input,
   Renderer2,
   signal,
   ViewChild,
 } from '@angular/core';
+import { Momahid } from '../../models/momahid.model';
 
 @Component({
   selector: 'app-momahid-story',
@@ -13,6 +16,19 @@ import {
   styleUrl: './momahid-story.component.scss',
 })
 export class MomahidStoryComponent {
+  // ###############
+  momahidStoryInfo = input<Momahid>();
+
+  // marriage status
+  momahidMarriageStatus = computed(() =>
+    this.momahidStoryInfo()?.isMomahidMarried ? 'متزوج' : 'عازب'
+  );
+
+  // work/study status
+  momahidStudyOrWork = computed(() =>
+    this.momahidStoryInfo()?.isMomahidStudy ? 'أدرس' : 'أعمل'
+  );
+
   @ViewChild('storyContent') storyContent!: ElementRef;
   @ViewChild('momahidStoryContainer') momahidStoryContainer!: ElementRef;
   @ViewChild('expandingBtnContainer') expandingBtnContainer!: ElementRef;
