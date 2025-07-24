@@ -18,7 +18,6 @@ export class MomahidStoryComponent {
   @ViewChild('expandingBtnContainer') expandingBtnContainer!: ElementRef;
 
   isStoryExpanded = false;
-  inlineStoryStyle = signal(`height: 560px; overflow: hidden;`);
 
   expandStory() {
     if (!this.isStoryExpanded) {
