@@ -29,6 +29,23 @@ export class MomahidStoryComponent {
     this.momahidStoryInfo()?.isMomahidStudy ? 'أدرس' : 'أعمل'
   );
 
+  // Addiction duration display
+  momahidAddictionDurationDisplay = computed(() => {
+    const addictionDuration = this.momahidStoryInfo()?.momahidAddictionDuration;
+    if (!addictionDuration) return '';
+
+    if (addictionDuration >= 1 && addictionDuration < 2) {
+      return `سنة واحدة من الإدمان`;
+    } else if (addictionDuration >= 2 && addictionDuration < 3) {
+      return `سنتان من الإدمان`;
+    } else if (addictionDuration >= 3 && addictionDuration <= 10) {
+      return `${addictionDuration} سنوات من الإدمان`;
+    } else {
+      return `${addictionDuration} سنة من الإدمان`;
+    }
+  });
+
+  // ######################
   @ViewChild('storyContent') storyContent!: ElementRef;
   @ViewChild('momahidStoryContainer') momahidStoryContainer!: ElementRef;
   @ViewChild('expandingBtnContainer') expandingBtnContainer!: ElementRef;
