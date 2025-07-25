@@ -1,5 +1,17 @@
 <section aria-label="momahidoun and their stories">
-  @for (momahidStory of momahidounStories; track momahidStory.id) {
-  <app-momahid-story [momahidStoryInfo]="momahidStory"></app-momahid-story>
+  <!-- Verified Stories -->
+  @for (verifiedMomahidStory of verifiedStoriesToBeDisplayed; track
+  verifiedMomahidStory.id) {
+  <app-momahid-story
+    [momahidStoryInfo]="verifiedMomahidStory"
+  ></app-momahid-story>
+  }
+
+  <!-- Unverified Stories -->
+  @for (unverifiedMomahidStory of unverifiedStoriesToBeDisplayed; track
+  unverifiedMomahidStory.id) {
+  <app-momahid-story
+    [momahidStoryInfo]="unverifiedMomahidStory"
+  ></app-momahid-story>
   }
 </section>

@@ -15,6 +15,16 @@ import { catchError } from 'rxjs';
 })
 export class TheMomahidounComponent implements OnInit {
   momahidounStories: Momahid[] = [];
+
+  // Splitting Stories To verified and unverified
+  verifiedStoriesOriginal: Momahid[] = [];
+  unverifiedStoriesOriginal: Momahid[] = [];
+
+  // The stories to be displayed based on the user preference
+  // Initially all the stories will be displayed
+  verifiedStoriesToBeDisplayed: Momahid[] = [];
+  unverifiedStoriesToBeDisplayed: Momahid[] = [];
+
   constructor(private momahidStoryService: MomahidStoryService) {}
 
   ngOnInit(): void {
@@ -26,6 +36,24 @@ export class TheMomahidounComponent implements OnInit {
           throw err;
         })
       )
-      .subscribe((mStories) => (this.momahidounStories = mStories));
+      .subscribe((mStories) => {
+        // Store all the stories
+        this.momahidounStories = mStories;
+
+        // only the verified stories
+        this.verifiedStoriesOriginal = this.momahidounStories.filter(
+          (momahidStory) => momahidStory.isStoryVerified
+        );
+
+        // only the unverified stories
+        this.unverifiedStoriesOriginal = this.momahidounStories.filter(
+          (momahidStory) => !momahidStory.isStoryVerified
+        );
+
+        // Stories to be displayed
+        // Reflects current user-applied filters; initially displays all items
+        this.verifiedStoriesToBeDisplayed = this.verifiedStoriesOriginal;
+        this.unverifiedStoriesToBeDisplayed = this.unverifiedStoriesOriginal;
+      });
   }
 }
