@@ -37,8 +37,12 @@ export class TheMomahidounComponent implements OnInit {
         })
       )
       .subscribe((mStories) => {
-        // Store all the stories
-        this.momahidounStories = mStories;
+        // Store only the approved stories
+        // This is only a backup because the server should only serve the approved stories,
+        // ### I should add something later to alert us if the unapproved stories was also provided here
+        this.momahidounStories = mStories.filter(
+          (momahidStory) => momahidStory.isStoryApproved
+        );
 
         // only the verified stories
         this.verifiedStoriesOriginal = this.momahidounStories.filter(
