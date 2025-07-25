@@ -8,6 +8,17 @@
           width="77"
           height="77\"
         />
+        @if (momahidStoryInfo()?.isStoryVerified) {
+        <span class="virificatioin-status">
+          <img
+            src="icons/others/verified-icon.png"
+            alt="icon for that indicate verified stories"
+            width="20px"
+            height="20px"
+          />
+        </span>
+
+        }
       </div>
       <div class="info">
         <div class="name">{{ momahidStoryInfo()?.momahidName }}</div>
