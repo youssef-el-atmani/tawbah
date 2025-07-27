@@ -408,13 +408,14 @@ export class JoinMomahidounComponent {
       pageLanguage: 'ar',
       isStoryApproved: false,
       isStoryVerified: false,
+      momahidPhoto: '',
     };
     const momahidFormInput = this.momahidForm.value;
 
     const newMomahidData = { ...storyMacroInfo, ...momahidFormInput };
 
     this.http
-      .post('http://localhost:3000/al-momahidoun', newMomahidData)
+      .post('http://localhost:3000/momahidoun', newMomahidData)
       .subscribe((res: any) => alert('تم استقبال طلبك بنجاح'));
   }
 }
