@@ -4,7 +4,7 @@ import {
   NgSelectComponent,
 } from '@ng-select/ng-select';
 import { HttpClient } from '@angular/common/http';
-import { Component, inject, OnInit, signal } from '@angular/core';
+import { Component, inject, signal } from '@angular/core';
 
 import {
   FormControl,
@@ -26,10 +26,8 @@ import {
   templateUrl: './join-momahidoun.component.html',
   styleUrl: './join-momahidoun.component.scss',
 })
-export class JoinMomahidounComponent implements OnInit {
+export class JoinMomahidounComponent {
   private formBuilder = inject(FormBuilder);
-
-  numberOfExistingMomahidoun = 0;
 
   momahidForm: FormGroup = new FormGroup({
     momahidName: new FormControl('', Validators.required),
@@ -407,9 +405,6 @@ export class JoinMomahidounComponent implements OnInit {
     }
 
     const storyMacroInfo = {
-      // Because Ids starting from 0,
-      // always the new-id will be equal to the number of existing momahidoun
-      id: this.numberOfExistingMomahidoun,
       pageLanguage: 'ar',
       isStoryApproved: false,
       isStoryVerified: false,
@@ -421,13 +416,5 @@ export class JoinMomahidounComponent implements OnInit {
     this.http
       .post('http://localhost:3000/al-momahidoun', newMomahidData)
       .subscribe((res: any) => alert('تم استقبال طلبك بنجاح'));
-  }
-
-  ngOnInit(): void {
-    this.http
-      .get<any[]>('http://localhost:3000/al-momahidoun')
-      .subscribe((data) => {
-        this.numberOfExistingMomahidoun = data.length;
-      });
   }
 }
