@@ -8,6 +8,8 @@ export class MomahidStoryService {
   constructor(private http: HttpClient) {}
 
   getMomahidounStories(): Observable<Momahid[]> {
-    return this.http.get<Momahid[]>('http://localhost:3000/al-momahidoun');
+    return this.http.get<Momahid[]>(
+      'http://localhost:3000/momahidoun/approved'
+    );
   }
 }
