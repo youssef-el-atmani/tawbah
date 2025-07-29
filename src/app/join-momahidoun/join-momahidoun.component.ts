@@ -406,8 +406,6 @@ export class JoinMomahidounComponent {
 
     const storyMacroInfo = {
       pageLanguage: 'ar',
-      isStoryApproved: false,
-      isStoryVerified: false,
       momahidPhoto: '',
     };
     const momahidFormInput = this.momahidForm.value;
