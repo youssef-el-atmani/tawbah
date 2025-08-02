@@ -1,5 +1,5 @@
 **باسم اللّه الرحمن الرحيم**\
-**In the name of Allah, the most gracious, the most merciful**
+**In the name of Allah, the Most Gracious, the Most Merciful**
 
 # tawbah
 
