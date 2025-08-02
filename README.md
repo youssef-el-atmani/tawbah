@@ -1,3 +1,6 @@
+**باسم اللّه الرحمن الرحيم**\
+**In the name of Allah, the most gracious, the most merciful**
+
 # tawbah
 
 A web project sharing personal stories of breaking free from addiction by embracing the path back to Allah
