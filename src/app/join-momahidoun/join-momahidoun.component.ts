@@ -413,7 +413,10 @@ export class JoinMomahidounComponent {
     const newMomahidData = { ...storyMacroInfo, ...momahidFormInput };
 
     this.http
-      .post('http://localhost:3000/momahidoun', newMomahidData)
+      .post(
+        'https://tawbah-backend-production.up.railway.app/momahidoun',
+        newMomahidData
+      )
       .subscribe((res: any) => alert('تم استقبال طلبك بنجاح'));
   }
 }
