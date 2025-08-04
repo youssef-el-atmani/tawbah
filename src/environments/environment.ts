@@ -1,4 +1,4 @@
 export const environment = {
   production: true,
-  apiBaseUrl: 'https://tawbah-backend-production.up.railway.app/', // Railway API URL
+  apiBaseUrl: 'http://localhost:3000', // Local NestJS API URL
 };
