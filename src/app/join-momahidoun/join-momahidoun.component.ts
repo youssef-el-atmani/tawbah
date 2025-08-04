@@ -5,6 +5,7 @@ import {
 } from '@ng-select/ng-select';
 import { HttpClient } from '@angular/common/http';
 import { Component, inject, signal } from '@angular/core';
+import { environment } from '../../environments/environment';
 
 import {
   FormControl,
@@ -412,11 +413,9 @@ export class JoinMomahidounComponent {
 
     const newMomahidData = { ...storyMacroInfo, ...momahidFormInput };
 
+    const apiURL = environment.apiBaseUrl;
     this.http
-      .post(
-        'https://tawbah-backend-production.up.railway.app/momahidoun',
-        newMomahidData
-      )
+      .post(`${apiURL}/momahidoun`, newMomahidData)
       .subscribe((res: any) => alert('تم استقبال طلبك بنجاح'));
   }
 }
