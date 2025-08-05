@@ -1,41 +1,57 @@
 header {
-  height: 75px;
+  // height: 75px;
   background-color: #1e1b18;
   display: flex;
   justify-content: space-between;
-  flex-direction: row-reverse;
+  // flex-direction: row-reverse;
   align-items: center;
-  padding-inline: 50px;
-
+  padding: 5px 50px;
+  @media (max-width: 600px) {
+    padding: 5px 15px; /* or 0 if you want to remove it completely */
+  }
   .logo {
     cursor: pointer;
+    width: 40px;
+    height: 40px;
   }
 
   img {
     height: 80%;
   }
   nav {
+    display: flex;
+    align-items: center;
     ul {
       display: flex;
-      flex-direction: row-reverse;
-      gap: 37px;
-      .link {
-        cursor: pointer;
-        background-color: transparent;
-        color: #fffaff;
-        border: none;
-        border-bottom: 2px #8d8e8d solid;
-        padding-bottom: 3px;
-        font-size: 1.5rem;
-        text-decoration: none;
+      margin: 0;
+      // align-items: center;
+      // flex-direction: row-reverse;
+      gap: 17px;
+      padding: 0;
+      li {
+        list-style: none;
+        .link {
+          cursor: pointer;
+          background-color: transparent;
+          color: #fffaff;
+          border: none;
+          // border-bottom: 2px #8d8e8d solid;
+          padding-bottom: 3px;
+          font-size: 1rem;
+          text-decoration: none;
 
-        &:hover {
-          border-color: #fffaff;
-        }
+          display: flex;
+          align-items: center;
 
-        .plus {
-          font-weight: bold;
-          color: #3e92cc;
+          &:hover {
+            border-color: #fffaff;
+          }
+
+          .plus {
+            font-weight: bold;
+            color: #3e92cc;
+            margin-inline-start: 2px;
+          }
         }
       }
     }
