@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, signal } from '@angular/core';
 import { MomahidounBoxComponent } from '../components/momahidoun-box/momahidoun-box.component';
 import { StoryBoxComponent } from '../components/story-box/story-box.component';
 import { MomahidStoryComponent } from '../components/momahid-story/momahid-story.component';
@@ -15,6 +15,8 @@ import { catchError } from 'rxjs';
 })
 export class TheMomahidounComponent implements OnInit {
   momahidounStories: Momahid[] = [];
+
+  isLoading = signal(true);
 
   // Splitting Stories To verified and unverified
   verifiedStoriesOriginal: Momahid[] = [];
@@ -58,6 +60,7 @@ export class TheMomahidounComponent implements OnInit {
         // Reflects current user-applied filters; initially displays all items
         this.verifiedStoriesToBeDisplayed = this.verifiedStoriesOriginal;
         this.unverifiedStoriesToBeDisplayed = this.unverifiedStoriesOriginal;
+        this.isLoading.set(false);
       });
   }
 }

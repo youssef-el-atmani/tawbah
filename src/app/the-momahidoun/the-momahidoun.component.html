@@ -1,4 +1,7 @@
 <section aria-label="momahidoun and their stories">
+  @if(isLoading()){
+  <span class="loader"></span>
+  }
   <!-- Verified Stories -->
   @for (verifiedMomahidStory of verifiedStoriesToBeDisplayed; track
   verifiedMomahidStory.id) {
