@@ -1,3 +1,4 @@
+@import "variables";
 .momahid-story {
   border: 2px solid #dee2e6; //for debugging
   max-width: 600px;
@@ -46,8 +47,8 @@
       flex-direction: column;
       justify-content: center;
       align-items: center;
-      background-color: #ffd000;
-      color: #000;
+      background-color: $primary-color;
+      color: #fff;
       margin: 21px 0;
       border-radius: 7px;
       padding: 5px 0 7px;
@@ -62,7 +63,7 @@
       }
 
       p.starting-age {
-        color: #495057;
+        color: #fff;
         margin: 0;
         font-size: 0.8rem;
       }
