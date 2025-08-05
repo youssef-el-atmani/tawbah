@@ -1,6 +1,6 @@
 .momahid-story {
   border: 2px solid #dee2e6; //for debugging
-  width: 600px;
+  max-width: 600px;
   border-radius: 11px;
 
   &:hover {
@@ -8,17 +8,15 @@
   }
 
   .story-content {
-    // height: 560px;
-    // overflow: hidden;
     padding: 11px;
 
     .profile {
       display: flex;
       align-items: center;
-      gap: 27px;
 
       img {
         border-radius: 100%;
+        // margin-left: 20px;
       }
 
       .verification-status {
@@ -27,15 +25,11 @@
         position: relative;
         top: 27px;
         left: 22px;
-        // bottom: 120px;
-        // background-color: #c2f8cb;
-        // color: #329408;
-        // padding: 0 9px;
       }
 
       .name {
         font-weight: bold;
-        font-size: 1.4rem;
+        font-size: 1.2rem;
         color: #212529;
       }
 
@@ -43,6 +37,7 @@
         display: flex;
         gap: 7px;
         color: #495057;
+        font-size: 13px;
       }
     }
 
@@ -55,13 +50,13 @@
       color: #000;
       margin: 21px 0;
       border-radius: 7px;
-      padding: 11px 0 15px;
+      padding: 5px 0 7px;
 
       p.duration {
         display: flex;
         // justify-content: center;
         align-items: center;
-        font-size: 1.4rem;
+        font-size: 1.2rem;
         font-weight: bold;
         margin: 0;
       }
@@ -69,6 +64,7 @@
       p.starting-age {
         color: #495057;
         margin: 0;
+        font-size: 0.8rem;
       }
     }
 
@@ -77,13 +73,13 @@
       > section {
         margin-bottom: 37px;
         h2 {
-          font-weight: bold;
-          font-size: 1.5rem;
+          // font-weight: bold;
+          font-size: 1.4rem;
           color: #212529;
         }
         h3 {
           font-weight: bold;
-          font-size: 1.2rem;
+          font-size: 1.1rem;
           color: #495057;
           margin-right: 17px;
           margin-bottom: 3px;
@@ -92,11 +88,15 @@
           margin-right: 17px;
           margin-top: 0;
           color: #343a40;
+          font-size: 15px;
         }
         ul {
           color: #343a40;
 
           list-style: circle;
+          li {
+            font-size: 15px;
+          }
         }
       }
     }
